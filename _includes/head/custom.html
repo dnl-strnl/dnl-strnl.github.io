@@ -1,3 +1,46 @@
+<!-- Minimal dark prev/next post navigation -->
+<style>
+.pagination--pager {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #9aa0a6;
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 0.75em 1em;
+}
+
+.pagination--pager:hover,
+.pagination--pager:focus {
+  color: #eaeaea;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #666;
+}
+
+.pagination--pager.disabled {
+  opacity: 0.25;
+}
+</style>
+
+<!-- Blog post layout: justified text, spaced and framed images, centered captions -->
+{% if page.collection == 'posts' %}
+<style>
+.page__content > p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.page__content p > img {
+  display: block; margin: 2.5em auto;
+  border-radius: 8px; box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+}
+.page__content figure { margin: 2.5em 0; }
+.page__content figcaption {
+  width: 100%; margin-top: 0.75em; text-align: center; line-height: 1.4;
+  font-size: 0.8em; font-style: italic; opacity: 0.75;
+}
+.side-by-side { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin: 2.5em 0; }
+.side-by-side figure { margin: 0; align-content: start; }
+.page__content > p.punch { margin: 2.5em 0; text-align: center; font-size: 1.3em; font-weight: 600; letter-spacing: 0.02em; }
+</style>
+{% endif %}
+
 <!-- Favicon -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
 
