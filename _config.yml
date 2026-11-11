@@ -48,10 +48,10 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/your-actual-username"
+      url: "https://github.com/dnl-strnl"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/your-linkedin-username"
+      url: "https://linkedin.com/in/daniel-sturniolo"
 
 # Reading Files
 include:
