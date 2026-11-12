@@ -127,7 +127,7 @@ layout: single
     <img src="/assets/images/icons/vistapath.png" alt="Vistapath">
   </div>
   <div class="timeline-date">2022 - 2026</div>
-  <div class="timeline-role">Staff Machine Engineer</div>
+  <div class="timeline-role">Staff Machine Learning Engineer</div>
   <div class="timeline-org"><a href="https://www.vistapathbio.com" target="_blank" rel="noopener">Vistapath Biosystems</a></div>
   <div class="timeline-desc"></div>
 </div>
