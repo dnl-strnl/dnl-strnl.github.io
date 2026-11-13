@@ -1,0 +1,8 @@
+---
+layout: null
+---
+{"pages": [{"title": "Home", "url": {{ '/' | relative_url | jsonify }}},
+{% for item in site.data.navigation.main %}{"title": {{ item.title | jsonify }}, "url": {{ item.url | relative_url | jsonify }}},
+{% endfor %}null],
+"posts": [{% for post in site.posts %}{"title": {{ post.title | jsonify }}, "url": {{ post.url | relative_url | jsonify }}, "date": {{ post.date | date: '%b %-d, %Y' | jsonify }}, "tags": {{ post.tags | jsonify }}, "text": {{ post.content | strip_html | normalize_whitespace | jsonify }}, "links": [{% assign parts = post.content | split: 'href="' %}{% for part in parts offset: 1 %}{% assign scheme = part | slice: 0, 4 %}{% if scheme == 'http' and part contains '</a>' %}{{ part | split: '</a>' | first | jsonify }}, {% endif %}{% endfor %}null]},
+{% endfor %}null]}

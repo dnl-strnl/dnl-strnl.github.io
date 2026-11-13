@@ -22,6 +22,7 @@ title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "Dnl Strnl"
 description:
+og_image: "/assets/images/dnl-strnl.png" # fallback image for link previews
 url: "https://dnl-strnl.github.io" # Replace with your actual GitHub username
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "dnl-strnl/dnl-strnl.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"

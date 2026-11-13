@@ -44,6 +44,9 @@
 <!-- Favicon -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
 
+<!-- Command palette (Cmd/Ctrl+K) -->
+<script defer src="{{ '/assets/js/palette.js' | relative_url }}" data-index="{{ '/assets/js/palette-index.json' | relative_url }}" data-site-host="{{ site.url | split: '//' | last }}"></script>
+
 <!-- Open external and PDF links in new tab -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
