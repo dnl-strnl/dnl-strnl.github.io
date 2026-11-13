@@ -2,7 +2,7 @@
 title: "Introducing: The Baseball Hall of Weird"
 date: 2026-10-11
 categories: blog
-tags: [blog]
+tags: [baseball, statistics, projects]
 ---
 
 The baseball [Hall of Weird](https://dnl-strnl.github.io/hall-of-weird/) is officially live, born October 10th, 2026. "HoW" for short, as in: ***HOW*** is that even possible? It’s a hall of fame for the oddities and extremes of baseball; numbers that sit outside the curve and tales that sound too unbelievable to be true.
