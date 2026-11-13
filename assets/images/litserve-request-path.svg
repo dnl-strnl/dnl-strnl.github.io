@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>LitServe: the device pipeline posts an image over HTTP, and the request passes through decode_request, predict, and encode_response; setup loads the model directory once per worker</title>
+  <rect width="1000" height="360" rx="14" fill="#161616"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- device pipeline -->
+  <rect x="30" y="92" width="150" height="58" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#9ca3af" stroke-opacity="0.85" stroke-width="1.5"/>
+  <text x="105" y="117" text-anchor="middle" font-size="15" font-weight="600" fill="#e5e5e5">Device pipeline</text>
+  <text x="105" y="136" text-anchor="middle" font-size="11" fill="#9ca3af">image in, JSON out</text>
+
+  <!-- HTTP -->
+  <line x1="188" y1="121" x2="282" y2="121" stroke="#9ca3af" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="235" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#e5e5e5">HTTP</text>
+  <text x="235" y="142" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#9ca3af">POST /predict</text>
+
+  <!-- server panel -->
+  <rect x="290" y="30" width="690" height="300" rx="12" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="1.5"/>
+  <path d="M334 46 L324 61 L331 61 L327 73 L338 57 L331 57 z" fill="#facc15"/>
+  <text x="346" y="67" font-size="20" font-weight="700" fill="#e5e5e5">LitServe</text>
+
+  <!-- request path -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" text-anchor="middle">
+    <g fill="#4ade80" fill-opacity="0.14" stroke="#4ade80" stroke-opacity="0.85" stroke-width="1.5">
+      <rect x="325" y="92" width="190" height="58" rx="8"/>
+      <rect x="540" y="92" width="190" height="58" rx="8"/>
+      <rect x="755" y="92" width="190" height="58" rx="8"/>
+    </g>
+    <g font-size="15" font-weight="600" fill="#4ade80">
+      <text x="420" y="117">decode_request</text>
+      <text x="635" y="117">predict</text>
+      <text x="850" y="117">encode_response</text>
+    </g>
+
+    <!-- setup and what it loads -->
+    <rect x="540" y="214" width="190" height="58" rx="8" fill="#f472b6" fill-opacity="0.14" stroke="#f472b6" stroke-opacity="0.85" stroke-width="1.5"/>
+    <text x="635" y="239" font-size="15" font-weight="600" fill="#f472b6">setup</text>
+
+    <g fill="#38bdf8" fill-opacity="0.14" stroke="#38bdf8" stroke-opacity="0.85" stroke-width="1.5">
+      <rect x="325" y="214" width="190" height="58" rx="8"/>
+      <rect x="755" y="214" width="190" height="58" rx="8"/>
+    </g>
+    <g font-size="15" font-weight="600" fill="#38bdf8">
+      <text x="420" y="239">model_dir/</text>
+      <text x="850" y="239">Hydra</text>
+    </g>
+  </g>
+
+  <g font-size="11" fill="#9ca3af" text-anchor="middle">
+    <text x="420" y="136">JSON → image + args</text>
+    <text x="635" y="136">pre · forward · post</text>
+    <text x="850" y="136">dict → JSON</text>
+    <text x="420" y="258">weights + config.yaml</text>
+    <text x="635" y="258">once per worker</text>
+    <text x="850" y="258">server + endpoint config</text>
+  </g>
+
+  <g stroke="#9ca3af" stroke-width="2">
+    <line x1="518" y1="121" x2="537" y2="121" marker-end="url(#arrow)"/>
+    <line x1="733" y1="121" x2="752" y2="121" marker-end="url(#arrow)"/>
+    <line x1="518" y1="243" x2="537" y2="243" marker-end="url(#arrow)"/>
+    <line x1="752" y1="243" x2="733" y2="243" marker-end="url(#arrow)"/>
+    <line x1="635" y1="211" x2="635" y2="154" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  </g>
+</svg>
