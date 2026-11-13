@@ -1,0 +1,62 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+/* Dark syntax highlighting (base16). The neon skin ships a light palette for
+   code blocks; these are declared first so they win over its !default values. */
+$base00: #1c1717; // block background
+$base01: #2a2323;
+$base02: #3a3131;
+$base03: #6b5f63;
+$base04: #8d8085; // comments
+$base05: #f0e6ea; // text
+$base06: #f7eff2;
+$base07: #ffffff;
+$base08: #ff4d94;
+$base09: #ff9e3d;
+$base0a: #e6db5a;
+$base0b: #4be36a;
+$base0c: #3fd0d0;
+$base0d: #6aa2ff;
+$base0e: #d36bff;
+$base0f: #d98a5c;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Command palette (assets/js/palette.js) */
+.palette {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  padding: 12vh 1em 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(3px);
+  &.open { display: block; }
+}
+.palette__box {
+  max-width: 36em; margin: 0 auto; overflow: hidden;
+  color: $text-color; background: $background-color;
+  border: 1px solid $border-color; border-radius: 8px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+.palette__input, .palette__input:focus {
+  width: 100%; margin: 0; padding: 0.9em 1em; font-size: 1em;
+  color: inherit; background: transparent;
+  border: 0; border-bottom: 1px solid $border-color; border-radius: 0; box-shadow: none; outline: none;
+}
+.palette__list { max-height: 55vh; margin: 0; padding: 0.4em; overflow-y: auto; list-style: none; }
+.palette__row {
+  display: flex; align-items: center; gap: 1em; padding: 0.5em 0.7em;
+  color: inherit; text-decoration: none; border-radius: 6px;
+  &:hover, &:visited { color: inherit; text-decoration: none; }
+}
+.palette__list .active .palette__row { background: rgba($primary-color, 0.18); }
+.palette__main { flex: 1; min-width: 0; }
+.palette__title, .palette__sub { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.palette__title { font-size: 0.85em; font-weight: 600; }
+.palette__sub { font-size: 0.7em; opacity: 0.6; }
+.palette__kind { font-size: 0.6em; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; }
+.palette__empty { padding: 0.9em 0.7em; font-size: 0.8em; opacity: 0.6; }
+.palette__hint {
+  margin-left: 0.5em; padding: 0.1em 0.45em; font-size: 0.75em;
+  border: 1px solid $border-color; border-radius: 4px; opacity: 0.7;
+}
