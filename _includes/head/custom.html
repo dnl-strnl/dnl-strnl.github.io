@@ -37,6 +37,12 @@
 }
 .side-by-side { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin: 2.5em 0; }
 .side-by-side figure { margin: 0; align-content: start; }
+/* Transparent window screenshots: no frame (it would square off the rounded corners) and a shadow
+   that follows the alpha */
+.page__content > p.window-shot > img {
+  width: 100%; max-width: none; border-radius: 0; box-shadow: none;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+}
 .page__content > p.punch { margin: 2.5em 0; text-align: center; font-size: 1.3em; font-weight: 600; letter-spacing: 0.02em; }
 </style>
 {% endif %}

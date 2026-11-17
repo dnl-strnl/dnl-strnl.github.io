@@ -24,6 +24,10 @@ $base0d: #6aa2ff;
 $base0e: #d36bff;
 $base0f: #d98a5c;
 
+/* Accent color: lavender */
+$primary-color: #8f80dc;
+$link-color-visited: $primary-color; // the skin's 25% darkening is too dim on the dark background
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -59,4 +63,28 @@ $base0f: #d98a5c;
 .palette__hint {
   margin-left: 0.5em; padding: 0.1em 0.45em; font-size: 0.75em;
   border: 1px solid $border-color; border-radius: 4px; opacity: 0.7;
+}
+
+/* Pin the masthead to the left edge of the viewport instead of the centered content column */
+.masthead__inner-wrap { max-width: 100%; }
+
+/* Slim footer: one hairline-topped row (links left, copyright right) instead of the skin's solid band */
+.page__footer {
+  margin-top: 2em; color: rgba($text-color, 0.55); background: transparent; border-top: 1px solid $border-color;
+  footer {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25em 1.5em;
+    margin-top: 0; padding: 0.9em 1em;
+    &::after { display: none; } // theme clearfix would become a third flex item
+  }
+  a { text-decoration: none; &:hover { color: $text-color; } }
+}
+.page__footer-follow li { padding-top: 0; padding-bottom: 0; letter-spacing: 0.06em; }
+.page__footer-copyright { font-size: $type-size-7; }
+
+/* Center the author name and links under the avatar (110px wide in the desktop sidebar).
+   The link list is centered as a block so its icons still line up in a column. */
+@include breakpoint($large) {
+  .sidebar .author__name, .sidebar .author__urls-wrapper { width: 110px; text-align: center; }
+  .sidebar .author__urls { width: fit-content; margin: 0 auto; text-align: left; }
+  .sidebar .author__urls a { padding-right: 0; }
 }
