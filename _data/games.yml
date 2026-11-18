@@ -1,0 +1,7 @@
+# Cards on /games/, in display order (two per row).
+#   url: where the app lives in production, relative to this site (project Pages share its origin).
+#   dev: where its local dev server listens; used instead of `url` under `jekyll serve`.
+- title: "FLOTILLA"
+  description: "Naval action-economy wargame."
+  url: /flotilla/
+  dev: https://dnl-strnl.github.io/flotilla/

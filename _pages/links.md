@@ -17,8 +17,8 @@ layout: single
 #links-graph .edge.sim { stroke-dasharray: 2 3; }
 #links-graph .node { cursor: pointer; }
 #links-graph .node text { fill: currentColor; font-size: 9px; pointer-events: none; opacity: 0; }
-#links-graph .node.doc text { font-size: 11px; font-weight: 600; opacity: 0.9; }
-#links-graph.zoomed .node text, #links-graph .node.lit text { opacity: 0.9; }
+#links-graph .node.doc text { font-size: 11px; font-weight: 600; }
+#links-graph .node text.show { opacity: 0.9; }
 #links-graph .dim { opacity: 0.08; }
 #links-graph .edge.lit { stroke-opacity: 0.6; }
 #links-legend { position: fixed; left: 1.5em; bottom: 4.5em; display: flex; flex-wrap: wrap; gap: 0.25em 1.25em; font-size: 0.75em; pointer-events: none; }

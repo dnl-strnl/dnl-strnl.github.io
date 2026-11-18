@@ -68,6 +68,12 @@ $link-color-visited: $primary-color; // the skin's 25% darkening is too dim on t
 /* Pin the masthead to the left edge of the viewport instead of the centered content column */
 .masthead__inner-wrap { max-width: 100%; }
 
+/* Smaller code block text on desktop, where the sidebars squeeze the text column while the root
+   font size grows: ~78 columns fit instead of ~60. Below $large the theme's 0.75em is kept. */
+div.highlighter-rouge, figure.highlight {
+  @include breakpoint($large) { font-size: 0.6em; }
+}
+
 /* Slim footer: one hairline-topped row (links left, copyright right) instead of the skin's solid band */
 .page__footer {
   margin-top: 2em; color: rgba($text-color, 0.55); background: transparent; border-top: 1px solid $border-color;

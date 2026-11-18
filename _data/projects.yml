@@ -1,0 +1,28 @@
+# Cards on /projects/, in display order (two per row). Things you use or look at, not play; games are in games.yml.
+#   url:   a live app, relative to this site (project Pages share its origin); previewed in the card like a game.
+#   dev:   where that app's local dev server listens; used instead of `url` under `jekyll serve`.
+#   preview: extra query string for the card's preview only (e.g. autoplay); the link itself opens `url` as written.
+#   image: a still or gif for projects that need a backend and can't run on Pages.
+#   post:  slug of the write-up in _posts/; linked once that post is published.
+#   repo:  source; linked when there is no live app or published post.
+- title: "CUDA Cube"
+  description: "3D visualizer for how threads, warps, and blocks tile a GPU kernel launch."
+  url: /cuda-lab/cuda-cube.html?algo=stencil3D
+  dev: https://dnl-strnl.github.io/cuda-lab/cuda-cube.html?algo=stencil3D
+  preview: play=loop&embed=1
+  repo: https://github.com/dnl-strnl/cuda-lab
+
+- title: "imagine"
+  description: "Text-to-image server and client built around the four-image grid."
+  image: /assets/images/imagine-card.jpg
+  repo: https://github.com/dnl-strnl/imagine
+
+- title: "art-critic"
+  description: "Teach a model your taste: an RLHF loop for visual preference, one prompt at a time."
+  image: /assets/images/art-critic.jpg
+  repo: https://github.com/dnl-strnl/art-critic
+
+- title: "Hall of Weird"
+  description: "A hall of fame for baseball's oddities and statistical extremes, back to 1871."
+  url: /hall-of-weird/
+  dev: https://dnl-strnl.github.io/hall-of-weird/
