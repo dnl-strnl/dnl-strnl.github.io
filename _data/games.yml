@@ -5,3 +5,8 @@
   description: "Naval action-economy wargame."
   url: /flotilla/
   dev: https://dnl-strnl.github.io/flotilla/
+
+- title: "Trinity"
+  description: "Card game engine: procedural generation, deck building, board combat."
+  url: /trinity/
+  dev: https://dnl-strnl.github.io/trinity/
