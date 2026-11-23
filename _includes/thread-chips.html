@@ -1,0 +1,5 @@
+{% comment %}
+  Links from one book or paper to each thread (threads.yml) that cites it. Pass the item's `id`.
+  A chip takes its thread's color: the same yellow, pink, teal, lavender cycle as the threads on /library/.
+{% endcomment %}
+{% assign thread_colors = "#ffd84d,#ff5fa2,#3fd9c4,#8f80dc" | split: "," %}{% for thread in site.data.threads %}{% assign turn = forloop.index0 | modulo: thread_colors.size %}{% if thread.refs contains include.id %}<a class="thread-chip" style="--thread: {{ thread.color | default: thread_colors[turn] }}" href="{{ '/library/' | relative_url }}#thread-{{ thread.id }}">{{ thread.title }}</a>{% endif %}{% endfor %}

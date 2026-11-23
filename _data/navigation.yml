@@ -5,6 +5,8 @@ main:
     url: /projects/
   - title: "Games"
     url: /games/
+  - title: "Library"
+    url: /library/
   - title: "Links"
     url: /links/
   - title: "Resume"

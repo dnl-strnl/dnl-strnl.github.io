@@ -1,0 +1,588 @@
+# Books on /library/. "Currently reading" keeps the order here; the other shelves sort by title.
+#   id:     short unique slug; threads.yml refers to a book by it, and it is the book's anchor (/library/#book-<id>).
+#   subtitle: optional; shown small under the title.
+#   status: reading | read | queue (owned, not yet read) | reference (a textbook kept to look things up in). This picks the shelf.
+#   cover:  image under assets/images/library/. A transparent PNG keeps its own outline (the shadow follows the alpha);
+#           a book with no cover gets a typeset placeholder.
+#   note:   a sentence or two, shown under the book. Markdown.
+#   post:   slug of a full review in _posts/; the book links to it once that post is published.
+#   url:    publisher or author page; linked when there is no published review.
+- id: instinctive-computing
+  title: "Instinctive Computing"
+  author: "Yang Cai"
+  year: 2016
+  status: reading
+  cover: /assets/images/library/instinctive-computing.jpg
+  url: https://link.springer.com/book/10.1007/978-1-4471-7278-9
+
+- id: superintelligence
+  title: "Superintelligence"
+  subtitle: "Paths, Dangers, Strategies"
+  author: "Nick Bostrom"
+  year: 2014
+  status: read
+  cover: /assets/images/library/superintelligence.jpg
+  note: "Approaches a machine mind from first principles, almost like an animal."
+  url: https://global.oup.com/academic/product/superintelligence-9780199678112
+
+- id: anigrafs
+  title: "Anigrafs"
+  subtitle: "Experiments in Cooperative Cognitive Architecture"
+  author: "Whitman Richards"
+  year: 2015
+  status: read
+  cover: /assets/images/library/anigrafs.jpg
+  url: https://mitpress.mit.edu/9780262527781/anigrafs/
+
+- id: dynamic-programming
+  title: "Dynamic Programming"
+  author: "Richard Bellman"
+  year: 1957
+  status: queue
+  cover: /assets/images/library/dynamic-programming.jpg
+  url: https://store.doverpublications.com/products/9780486428093
+
+- id: deep-learning
+  title: "Deep Learning"
+  author: "Ian Goodfellow, Yoshua Bengio, Aaron Courville"
+  year: 2016
+  status: reference
+  cover: /assets/images/library/deep-learning.jpg
+  # post: <slug of the review, once written>
+  url: https://www.deeplearningbook.org/
+
+- id: self-aware-computing-systems
+  title: "Self-Aware Computing Systems"
+  author: "Samuel Kounev, Jeffrey O. Kephart, Aleksandar Milenkoski, Xiaoyun Zhu (eds.)"
+  year: 2017
+  status: reading
+  cover: /assets/images/library/self-aware-computing-systems.jpg
+  note: "A reference text; read in parts."
+  url: https://link.springer.com/book/10.1007/978-3-319-47474-8
+
+- id: rl-state-of-the-art
+  title: "Reinforcement Learning"
+  subtitle: "State-of-the-Art"
+  author: "Marco Wiering, Martijn van Otterlo (eds.)"
+  year: 2012
+  status: read
+  cover: /assets/images/library/rl-state-of-the-art.jpg
+  url: https://link.springer.com/book/10.1007/978-3-642-27645-3
+
+- id: rl-an-introduction
+  title: "Reinforcement Learning"
+  subtitle: "An Introduction"
+  author: "Richard S. Sutton, Andrew G. Barto"
+  year: 2018
+  status: read
+  cover: /assets/images/library/rl-an-introduction.jpg
+  url: http://incompleteideas.net/book/the-book-2nd.html
+
+- id: design-patterns
+  title: "Design Patterns"
+  subtitle: "Elements of Reusable Object-Oriented Software"
+  author: "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides"
+  year: 1994
+  status: read
+  cover: /assets/images/library/design-patterns.jpg
+
+- id: neuro-dynamic-programming
+  title: "Neuro-Dynamic Programming"
+  author: "Dimitri P. Bertsekas, John N. Tsitsiklis"
+  year: 1996
+  status: reading
+  cover: /assets/images/library/neuro-dynamic-programming.jpg
+  url: http://www.athenasc.com/ndpbook.html
+
+- id: vehicles
+  title: "Vehicles"
+  subtitle: "Experiments in Synthetic Psychology"
+  author: "Valentino Braitenberg"
+  year: 1984
+  status: queue
+  cover: /assets/images/library/vehicles.jpg
+  url: https://mitpress.mit.edu/9780262521123/vehicles/
+
+- id: artificial-general-intelligence
+  title: "Artificial General Intelligence"
+  author: "Ben Goertzel, Cassio Pennachin (eds.)"
+  year: 2007
+  status: read
+  cover: /assets/images/library/artificial-general-intelligence.jpg
+  url: https://link.springer.com/book/10.1007/978-3-540-68677-4
+
+- id: engineering-general-intelligence-1
+  title: "Engineering General Intelligence, Part 1"
+  subtitle: "A Path to Advanced AGI via Embodied Learning and Cognitive Synergy"
+  author: "Ben Goertzel, Cassio Pennachin, Nil Geisweiller"
+  year: 2014
+  status: read
+  cover: /assets/images/library/engineering-general-intelligence-1.jpg
+  url: https://link.springer.com/book/10.2991/978-94-6239-027-0
+
+- id: engineering-general-intelligence-2
+  title: "Engineering General Intelligence, Part 2"
+  subtitle: "The CogPrime Architecture for Integrative, Embodied AGI"
+  author: "Ben Goertzel, Cassio Pennachin, Nil Geisweiller"
+  year: 2014
+  status: read
+  cover: /assets/images/library/engineering-general-intelligence-2.jpg
+  url: https://link.springer.com/book/10.2991/978-94-6239-030-0
+
+- id: vision
+  title: "Vision"
+  subtitle: "A Computational Investigation into the Human Representation and Processing of Visual Information"
+  author: "David Marr"
+  year: 1982
+  status: read
+  cover: /assets/images/library/vision.jpg
+  url: https://mitpress.mit.edu/9780262514620/vision/
+
+- id: code
+  title: "Code"
+  subtitle: "The Hidden Language of Computer Hardware and Software"
+  author: "Charles Petzold"
+  year: 1999
+  status: read
+  cover: /assets/images/library/code.jpg
+  url: https://www.charlespetzold.com/code/
+
+- id: probabilistic-reasoning
+  title: "Probabilistic Reasoning in Intelligent Systems"
+  subtitle: "Networks of Plausible Inference"
+  author: "Judea Pearl"
+  year: 1988
+  status: queue
+  cover: /assets/images/library/probabilistic-reasoning.jpg
+
+- id: neural-networks-and-deep-learning
+  title: "Neural Networks and Deep Learning"
+  subtitle: "A Textbook"
+  author: "Charu C. Aggarwal"
+  year: 2018
+  status: reference
+  cover: /assets/images/library/neural-networks-and-deep-learning.jpg
+  url: https://link.springer.com/book/10.1007/978-3-319-94463-0
+
+- id: ai-foundations-of-computational-agents
+  title: "Artificial Intelligence"
+  subtitle: "Foundations of Computational Agents"
+  author: "David L. Poole, Alan K. Mackworth"
+  year: 2010
+  status: reference
+  cover: /assets/images/library/ai-foundations-of-computational-agents.jpg
+  url: https://artint.info/
+
+- id: aima
+  title: "Artificial Intelligence"
+  subtitle: "A Modern Approach"
+  author: "Stuart Russell, Peter Norvig"
+  year: 2021
+  status: reference
+  cover: /assets/images/library/aima.jpg
+  url: https://aima.cs.berkeley.edu/
+
+- id: jungs-personality-theory-quantified
+  title: "Jung's Personality Theory Quantified"
+  author: "Douglass J. Wilde"
+  year: 2011
+  status: read
+  cover: /assets/images/library/jungs-personality-theory-quantified.jpg
+  url: https://link.springer.com/book/10.1007/978-0-85729-100-4
+
+- id: practical-mlops
+  title: "Practical MLOps"
+  subtitle: "Operationalizing Machine Learning Models"
+  author: "Noah Gift, Alfredo Deza"
+  year: 2021
+  status: read
+  cover: /assets/images/library/practical-mlops.jpg
+  url: https://www.oreilly.com/library/view/practical-mlops/9781098103002/
+
+- id: information-theory
+  title: "Information Theory"
+  subtitle: "A Tutorial Introduction"
+  author: "James V Stone"
+  year: 2015
+  status: read
+  cover: /assets/images/library/information-theory.jpg
+
+- id: principles-of-neural-information-theory
+  title: "Principles of Neural Information Theory"
+  subtitle: "Computational Neuroscience and Metabolic Efficiency"
+  author: "James V Stone"
+  year: 2018
+  status: queue
+  cover: /assets/images/library/principles-of-neural-information-theory.jpg
+
+- id: principles-of-neural-design
+  title: "Principles of Neural Design"
+  author: "Peter Sterling, Simon Laughlin"
+  year: 2015
+  status: queue
+  cover: /assets/images/library/principles-of-neural-design.jpg
+  url: https://mitpress.mit.edu/9780262534680/principles-of-neural-design/
+
+- id: neural-control-engineering
+  title: "Neural Control Engineering"
+  subtitle: "The Emerging Intersection between Control Theory and Neuroscience"
+  author: "Steven J. Schiff"
+  year: 2012
+  status: queue
+  cover: /assets/images/library/neural-control-engineering.jpg
+  url: https://mitpress.mit.edu/9780262015370/neural-control-engineering/
+
+- id: uncertainty
+  title: "Uncertainty"
+  subtitle: "The Soul of Modeling, Probability & Statistics"
+  author: "William Briggs"
+  year: 2016
+  status: queue
+  cover: /assets/images/library/uncertainty.jpg
+  url: https://link.springer.com/book/10.1007/978-3-319-39756-6
+
+- id: decision-making-under-uncertainty
+  title: "Decision Making Under Uncertainty"
+  subtitle: "Theory and Application"
+  author: "Mykel J. Kochenderfer"
+  year: 2015
+  status: queue
+  cover: /assets/images/library/decision-making-under-uncertainty.jpg
+  url: https://mitpress.mit.edu/9780262029254/decision-making-under-uncertainty/
+
+- id: evolutionary-computer-vision
+  title: "Evolutionary Computer Vision"
+  subtitle: "The First Footprints"
+  author: "Gustavo Olague"
+  year: 2016
+  status: queue
+  cover: /assets/images/library/evolutionary-computer-vision.jpg
+  url: https://link.springer.com/book/10.1007/978-3-662-43693-6
+
+- id: gans-in-action
+  title: "GANs in Action"
+  subtitle: "Deep Learning with Generative Adversarial Networks"
+  author: "Jakub Langr, Vladimir Bok"
+  year: 2019
+  status: read
+  cover: /assets/images/library/gans-in-action.jpg
+  url: https://www.manning.com/books/gans-in-action
+
+- id: essentials-of-metaheuristics
+  title: "Essentials of Metaheuristics"
+  author: "Sean Luke"
+  year: 2013
+  status: read
+  cover: /assets/images/library/essentials-of-metaheuristics.jpg
+  url: https://cs.gmu.edu/~sean/book/metaheuristics/
+
+- id: models-of-god
+  title: "Models of God and Alternative Ultimate Realities"
+  author: "Jeanine Diller, Asa Kasher (eds.)"
+  year: 2013
+  status: queue
+  cover: /assets/images/library/models-of-god.jpg
+  url: https://link.springer.com/book/10.1007/978-94-007-5219-1
+
+- id: fundamental-issues-of-ai
+  title: "Fundamental Issues of Artificial Intelligence"
+  author: "Vincent C. Müller (ed.)"
+  year: 2016
+  status: queue
+  cover: /assets/images/library/fundamental-issues-of-ai.jpg
+  url: https://link.springer.com/book/10.1007/978-3-319-26485-1
+
+- id: universal-artificial-intelligence
+  title: "Universal Artificial Intelligence"
+  subtitle: "Sequential Decisions Based on Algorithmic Probability"
+  author: "Marcus Hutter"
+  year: 2005
+  status: queue
+  cover: /assets/images/library/universal-artificial-intelligence.jpg
+  url: https://link.springer.com/book/10.1007/b138233
+
+- id: anthropic-cosmological-principle
+  title: "The Anthropic Cosmological Principle"
+  author: "John D. Barrow, Frank J. Tipler"
+  year: 1986
+  status: queue
+  cover: /assets/images/library/anthropic-cosmological-principle.jpg
+
+- id: anthropic-bias
+  title: "Anthropic Bias"
+  subtitle: "Observation Selection Effects in Science and Philosophy"
+  author: "Nick Bostrom"
+  year: 2002
+  status: queue
+  cover: /assets/images/library/anthropic-bias.jpg
+  url: https://anthropic-principle.com/
+
+- id: reasons-and-persons
+  title: "Reasons and Persons"
+  author: "Derek Parfit"
+  year: 1984
+  status: queue
+  cover: /assets/images/library/reasons-and-persons.jpg
+
+- id: global-catastrophic-risks
+  title: "Global Catastrophic Risks"
+  author: "Nick Bostrom, Milan M. Ćirković (eds.)"
+  year: 2008
+  status: queue
+  cover: /assets/images/library/global-catastrophic-risks.jpg
+
+- id: your-digital-afterlives
+  title: "Your Digital Afterlives"
+  subtitle: "Computational Theories of Life after Death"
+  author: "Eric Charles Steinhart"
+  year: 2014
+  status: queue
+  cover: /assets/images/library/your-digital-afterlives.jpg
+  url: https://link.springer.com/book/10.1057/9781137363862
+
+- id: learning-opencv
+  title: "Learning OpenCV"
+  subtitle: "Computer Vision with the OpenCV Library"
+  author: "Gary Bradski, Adrian Kaehler"
+  year: 2008
+  status: read
+  cover: /assets/images/library/learning-opencv.jpg
+
+- id: deep-learning-cookbook
+  title: "Deep Learning Cookbook"
+  subtitle: "Practical Recipes to Get Started Quickly"
+  author: "Douwe Osinga"
+  year: 2018
+  status: read
+  cover: /assets/images/library/deep-learning-cookbook.jpg
+
+- id: generative-deep-learning
+  title: "Generative Deep Learning"
+  subtitle: "Teaching Machines to Paint, Write, Compose, and Play"
+  author: "David Foster"
+  year: 2019
+  status: read
+  cover: /assets/images/library/generative-deep-learning.jpg
+
+- id: cloud-native-devops-with-kubernetes
+  title: "Cloud Native DevOps with Kubernetes"
+  subtitle: "Building, Deploying, and Scaling Modern Applications in the Cloud"
+  author: "John Arundel, Justin Domingus"
+  year: 2019
+  status: queue
+  cover: /assets/images/library/cloud-native-devops-with-kubernetes.jpg
+
+- id: hands-on-differential-privacy
+  title: "Hands-On Differential Privacy"
+  subtitle: "Introduction to the Theory and Practice Using OpenDP"
+  author: "Ethan Cowan, Michael Shoemate, Mayana Pereira"
+  year: 2024
+  status: reading
+  cover: /assets/images/library/hands-on-differential-privacy.jpg
+
+- id: nlp-with-transformers
+  title: "Natural Language Processing with Transformers"
+  subtitle: "Building Language Applications with Hugging Face"
+  author: "Lewis Tunstall, Leandro von Werra, Thomas Wolf"
+  year: 2022
+  status: read
+  cover: /assets/images/library/nlp-with-transformers.jpg
+
+- id: developing-apps-with-gpt-4-and-chatgpt
+  title: "Developing Apps with GPT-4 and ChatGPT"
+  subtitle: "Build Intelligent Chatbots, Content Generators, and More"
+  author: "Olivier Caelen, Marie-Alice Blete"
+  year: 2023
+  status: read
+  cover: /assets/images/library/developing-apps-with-gpt-4-and-chatgpt.jpg
+
+- id: high-performance-python
+  title: "High Performance Python"
+  subtitle: "Practical Performant Programming for Humans"
+  author: "Micha Gorelick, Ian Ozsvald"
+  year: 2020
+  status: read
+  cover: /assets/images/library/high-performance-python.jpg
+
+- id: robust-python
+  title: "Robust Python"
+  subtitle: "Write Clean and Maintainable Code"
+  author: "Patrick Viafore"
+  year: 2021
+  status: read
+  cover: /assets/images/library/robust-python.jpg
+
+- id: cybersecurity-ops-with-bash
+  title: "Cybersecurity Ops with bash"
+  subtitle: "Attack, Defend, and Analyze from the Command Line"
+  author: "Paul Troncone, Carl Albing"
+  year: 2019
+  status: read
+  cover: /assets/images/library/cybersecurity-ops-with-bash.jpg
+
+- id: machine-learning-and-security
+  title: "Machine Learning and Security"
+  subtitle: "Protecting Systems with Data and Algorithms"
+  author: "Clarence Chio, David Freeman"
+  year: 2018
+  status: queue
+  cover: /assets/images/library/machine-learning-and-security.jpg
+
+- id: practical-nlp
+  title: "Practical Natural Language Processing"
+  subtitle: "A Pragmatic Approach to Processing and Analyzing Language Data"
+  author: "Sowmya Vajjala, Bodhisattwa Majumder, Anuj Gupta, Harshit Surana"
+  year: 2020
+  status: read
+  cover: /assets/images/library/practical-nlp.jpg
+
+- id: nlp-with-pytorch
+  title: "Natural Language Processing with PyTorch"
+  subtitle: "Build Intelligent Language Applications Using Deep Learning"
+  author: "Delip Rao, Brian McMahan"
+  year: 2019
+  status: read
+  cover: /assets/images/library/nlp-with-pytorch.jpg
+
+- id: ml-with-python-cookbook
+  title: "Machine Learning with Python Cookbook"
+  subtitle: "Practical Solutions from Preprocessing to Deep Learning"
+  author: "Chris Albon"
+  year: 2018
+  status: read
+  cover: /assets/images/library/ml-with-python-cookbook.jpg
+
+- id: hands-on-machine-learning
+  title: "Hands-On Machine Learning with Scikit-Learn and TensorFlow"
+  subtitle: "Concepts, Tools, and Techniques to Build Intelligent Systems"
+  author: "Aurélien Géron"
+  year: 2017
+  status: read
+  cover: /assets/images/library/hands-on-machine-learning.jpg
+
+- id: deep-learning-a-practitioners-approach
+  title: "Deep Learning"
+  subtitle: "A Practitioner's Approach"
+  author: "Josh Patterson, Adam Gibson"
+  year: 2017
+  status: read
+  cover: /assets/images/library/deep-learning-a-practitioners-approach.jpg
+
+- id: autonomous-military-robotics
+  title: "Autonomous Military Robotics"
+  author: "Vishnu Nath, Stephen E. Levinson"
+  year: 2014
+  status: read
+  cover: /assets/images/library/autonomous-military-robotics.jpg
+  url: https://link.springer.com/book/10.1007/978-3-319-05606-7
+
+- id: machine-learning-design-patterns
+  title: "Machine Learning Design Patterns"
+  subtitle: "Solutions to Common Challenges in Data Preparation, Model Building, and MLOps"
+  author: "Valliappa Lakshmanan, Sara Robinson, Michael Munn"
+  year: 2020
+  status: read
+  cover: /assets/images/library/machine-learning-design-patterns.jpg
+
+- id: building-machine-learning-pipelines
+  title: "Building Machine Learning Pipelines"
+  subtitle: "Automating Model Life Cycles with TensorFlow"
+  author: "Hannes Hapke, Catherine Nelson"
+  year: 2020
+  status: read
+  cover: /assets/images/library/building-machine-learning-pipelines.jpg
+
+- id: multiagent-systems
+  title: "Multiagent Systems"
+  subtitle: "Algorithmic, Game-Theoretic, and Logical Foundations"
+  author: "Yoav Shoham, Kevin Leyton-Brown"
+  year: 2008
+  status: reading
+  cover: /assets/images/library/multiagent-systems.jpg
+  url: http://www.masfoundations.org/
+
+- id: multi-agent-systems-ferber
+  title: "Multi-Agent Systems"
+  subtitle: "An Introduction to Distributed Artificial Intelligence"
+  author: "Jacques Ferber"
+  year: 1999
+  status: read
+  cover: /assets/images/library/multi-agent-systems-ferber.jpg
+
+- id: bandit-algorithms
+  title: "Bandit Algorithms"
+  author: "Tor Lattimore, Csaba Szepesvári"
+  year: 2020
+  status: queue
+  cover: /assets/images/library/bandit-algorithms.jpg
+  url: https://doi.org/10.1017/9781108571401
+
+- id: computer-vision-models-learning-inference
+  title: "Computer Vision"
+  subtitle: "Models, Learning, and Inference"
+  author: "Simon J. D. Prince"
+  year: 2012
+  status: reference
+  cover: /assets/images/library/computer-vision-models-learning-inference.jpg
+  url: https://udlbook.github.io/cvbook/
+
+- id: introducing-mlops
+  title: "Introducing MLOps"
+  subtitle: "How to Scale Machine Learning in the Enterprise"
+  author: "Mark Treveil and the Dataiku Team"
+  year: 2020
+  status: read
+  cover: /assets/images/library/introducing-mlops.jpg
+  url: https://www.oreilly.com/library/view/introducing-mlops/9781492083283/
+
+- id: design-for-a-brain
+  title: "Design for a Brain"
+  subtitle: "The Origin of Adaptive Behaviour"
+  author: "W. Ross Ashby"
+  year: 1952
+  status: queue
+  cover: /assets/images/library/design-for-a-brain.jpg
+  url: https://archive.org/details/designforbrainor00ashb
+
+- id: intelligence-as-adaptive-behavior
+  title: "Intelligence as Adaptive Behavior"
+  subtitle: "An Experiment in Computational Neuroethology"
+  author: "Randall D. Beer"
+  year: 1990
+  status: queue
+  cover: /assets/images/library/intelligence-as-adaptive-behavior.jpg
+  url: https://shop.elsevier.com/books/intelligence-as-adaptive-behavior/chandrasekaran/978-0-12-084730-3
+
+- id: darwin-among-the-machines
+  title: "Darwin Among the Machines"
+  subtitle: "The Evolution of Global Intelligence"
+  author: "George B. Dyson"
+  year: 1997
+  status: queue
+  cover: /assets/images/library/darwin-among-the-machines.jpg
+  url: https://www.basicbooks.com/titles/george-dyson/darwin-among-the-machines/9780465031627/
+
+- id: deep-learning-and-the-game-of-go
+  title: "Deep Learning and the Game of Go"
+  author: "Max Pumperla, Kevin Ferguson"
+  year: 2019
+  status: queue
+  cover: /assets/images/library/deep-learning-and-the-game-of-go.jpg
+  url: https://www.manning.com/books/deep-learning-and-the-game-of-go
+
+- id: deep-learning-for-vision-systems
+  title: "Deep Learning for Vision Systems"
+  author: "Mohamed Elgendy"
+  year: 2020
+  status: read
+  cover: /assets/images/library/deep-learning-for-vision-systems.jpg
+  url: https://www.manning.com/books/deep-learning-for-vision-systems
+
+- id: evolvable-hardware
+  title: "Evolvable Hardware"
+  subtitle: "From Practice to Application"
+  author: "Martin A. Trefzer, Andy M. Tyrrell"
+  year: 2015
+  status: queue
+  cover: /assets/images/library/evolvable-hardware.jpg
+  url: https://link.springer.com/book/10.1007/978-3-662-44616-4

@@ -1,0 +1,72 @@
+# Threads on /library/: one thought, attached to every book and paper it draws on.
+#   id:      short unique slug; the thread's anchor (/library/#thread-<id>).
+#   thought: the highlight itself. Markdown.
+#   refs:    ids from library.yml and papers.yml, in display order. Each of those items links back here.
+#   color:   optional accent; threads otherwise take yellow, pink, teal and lavender in turn.
+- id: machine-as-organism
+  title: "The machine mind as an organism"
+  color: "#ffd84d"
+  thought: >-
+    A machine mind approached from first principles, almost like an animal: predator and prey
+    with respect to humans, a true organism.
+  refs:
+    - superintelligence
+    - instinctive-computing
+    - vehicles
+    - anigrafs
+    - design-for-a-brain
+    - intelligence-as-adaptive-behavior
+    - evolutionary-computer-vision
+    - engineering-general-intelligence-1
+    - self-aware-computing-systems
+    - universal-artificial-intelligence
+    - darwin-among-the-machines
+    - evolvable-hardware
+
+- id: reinforcement-learning
+  title: "Reinforcement learning"
+  color: "#8f80dc"
+  thought: >-
+    Learning from reward: dynamic programming at the root, then the value and
+    policy-gradient methods built on top of it.
+  refs:
+    - rl-an-introduction
+    - rl-state-of-the-art
+    - neuro-dynamic-programming
+    - dynamic-programming
+    - decision-making-under-uncertainty
+    - bandit-algorithms
+    - multiagent-systems
+    - neural-control-engineering
+    - aima
+    - ai-foundations-of-computational-agents
+
+- id: applied-ml
+  title: "Applied ML"
+  color: "#ff5fa2"
+  thought: >-
+    The practical shelf: building, shipping and securing ML systems, as opposed to the theory behind them.
+  refs:
+    - introducing-mlops
+    - machine-learning-design-patterns
+    - building-machine-learning-pipelines
+    - machine-learning-and-security
+    - practical-mlops
+    - practical-nlp
+    - generative-deep-learning
+    - nlp-with-pytorch
+    - nlp-with-transformers
+
+- id: ai-and-beyond
+  title: "AI and beyond"
+  color: "#3fd9c4"
+  thought: >-
+    Where AI runs into the bigger questions: what a mind is, what a person is, where observers
+    sit in the universe, and how it could all go wrong.
+  refs:
+    - anthropic-bias
+    - anthropic-cosmological-principle
+    - reasons-and-persons
+    - your-digital-afterlives
+    - universal-artificial-intelligence
+    - global-catastrophic-risks
