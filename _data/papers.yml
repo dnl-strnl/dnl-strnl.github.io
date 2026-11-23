@@ -1,0 +1,557 @@
+# Papers on /papers/. An entry needs only `id`, `url` and `status`: title, authors, year, abstract and
+# references come from OpenAlex. After adding papers, run `ruby _scripts/fetch-papers.rb`.
+#   id:     short unique slug; threads.yml refers to a paper by it, and it is the paper's anchor (/papers/#paper-<id>).
+#   url:    where the paper lives: an arXiv abstract page or a doi.org link.
+#   status: reading | read | queue. Papers being read are ringed on the map.
+#   label:  optional short name for the map ("TRPO"); the title, shortened, otherwise.
+#   area:   optional name for the focus area this paper falls in. Only named groups become areas (and chips);
+#           papers given the same name are kept together and papers given different names are kept apart, and
+#           every other paper joins the area it is most tied to.
+#   note:   optional annotation: a brief thought, shown under the title. Markdown.
+#   post:   optional slug of an extended write-up in _posts/ (the rare case); linked once that post is published.
+#   title, authors, year, venue: optional; each overrides what OpenAlex returned.
+#   doi:    optional; for a paper whose `url` is neither arXiv nor doi.org.
+- { id: trpo, url: "https://arxiv.org/abs/1502.05477", status: read, label: "TRPO", area: "Reinforcement learning" }
+- { id: gae, url: "https://arxiv.org/abs/1506.02438", status: read, label: "GAE", area: "Reinforcement learning" }
+- { id: ddpg, url: "https://arxiv.org/abs/1509.02971", status: read, label: "DDPG", area: "Reinforcement learning" }
+- { id: gail, url: "https://arxiv.org/abs/1606.03476", status: read, label: "GAIL" }
+- { id: seqgan, url: "https://arxiv.org/abs/1609.05473", status: read, label: "SeqGAN" }
+- { id: gan-actor-critic, url: "https://arxiv.org/abs/1610.01945", status: read, label: "GANs and actor-critic" }
+- { id: simgan, url: "https://arxiv.org/abs/1612.07828", status: read, label: "SimGAN" }
+- { id: wgan, url: "https://arxiv.org/abs/1701.07875", status: read, label: "WGAN", area: "GANs" }
+- { id: openai-es, url: "https://arxiv.org/abs/1703.03864", status: read, label: "OpenAI-ES", area: "Evolution" }
+- { id: curiosity, url: "https://arxiv.org/abs/1705.05363", status: read, label: "Curiosity (ICM)" }
+- { id: deep-neuroevolution, url: "https://arxiv.org/abs/1712.06567", status: read, label: "Deep Neuroevolution", area: "Evolution" }
+- { id: e-gan, url: "https://arxiv.org/abs/1803.00657", status: read, label: "E-GAN" }
+- { id: mpo, url: "https://arxiv.org/abs/1806.06920", status: read, label: "MPO", area: "Reinforcement learning" }
+- { id: segment-anything, url: "https://arxiv.org/abs/2304.02643", status: read, label: "Segment Anything", area: "Computer vision" }
+- { id: dpo, url: "https://arxiv.org/abs/2305.18290", status: read, label: "DPO", area: "Large language models" }
+- { id: this-is-my-unicorn-fluffy, url: "https://arxiv.org/abs/2204.01694", status: read }
+- { id: seaformer, url: "https://arxiv.org/abs/2301.13156", status: read, label: "SeaFormer++" }
+- { id: demystifying-clip-data, url: "https://arxiv.org/abs/2309.16671", status: read, area: "Vision-language pretraining" }
+- { id: recognize-any-regions, url: "https://arxiv.org/abs/2311.01373", status: read, area: "Computer vision" }
+- { id: 3d-vision-with-transformers-a, url: "https://arxiv.org/abs/2208.04309", status: read, area: "Computer vision" }
+- { id: a-cookbook-of-self-supervised, url: "https://arxiv.org/abs/2304.12210", status: read }
+- { id: a-generalist-agent, url: "https://arxiv.org/abs/2205.06175", status: read }
+- { id: a-novel-focal-tversky-loss, url: "https://arxiv.org/abs/1810.07842", status: read, area: "Computer vision" }
+- { id: a-survey-on-multimodal-large, url: "https://arxiv.org/abs/2306.13549", status: read, area: "Multimodal LLMs" }
+- { id: alignment-faking-in-large-language, url: "https://arxiv.org/abs/2412.14093", status: read, area: "Large language models" }
+- { id: adding-conditional-control-to-text, url: "https://arxiv.org/abs/2302.05543", status: read, area: "Diffusion models" }
+- { id: agent-attention, url: "https://arxiv.org/abs/2312.08874", status: read, label: "Agent Attention" }
+- { id: an-image-is-worth-16x16, url: "https://arxiv.org/abs/2010.11929", status: read }
+- { id: an-ultra-low-power-tinyml, url: "https://arxiv.org/abs/2207.04663", status: read }
+- { id: animatediff, url: "https://arxiv.org/abs/2307.04725", status: read, label: "AnimateDiff" }
+- { id: attention-u-net, url: "https://arxiv.org/abs/1804.03999", status: read, label: "Attention U-Net", area: "Computer vision" }
+- { id: attention-is-not-only-a, url: "https://arxiv.org/abs/2004.10102", status: read }
+- { id: attentive-mask-clip, url: "https://arxiv.org/abs/2212.08653", status: read, area: "Vision-language pretraining" }
+- { id: audioclip, url: "https://arxiv.org/abs/2106.13043", status: read, label: "AudioCLIP", area: "Vision-language pretraining" }
+- { id: augmenting-convolutional-networks-with-attention, url: "https://arxiv.org/abs/2112.13692", status: read }
+- { id: auto-regressive-next-token-predictors, url: "https://arxiv.org/abs/2309.06979", status: read, area: "Large language models" }
+- { id: autogen, url: "https://arxiv.org/abs/2308.08155", status: read, label: "AutoGen" }
+- { id: autoregressive-image-generation-using-residual, url: "https://arxiv.org/abs/2203.01941", status: read }
+- { id: axial-deeplab, url: "https://arxiv.org/abs/2003.07853", status: read, label: "Axial-DeepLab", area: "Computer vision" }
+- { id: blip-2, url: "https://arxiv.org/abs/2301.12597", status: read, label: "BLIP-2", area: "Vision-language pretraining" }
+- { id: bayesian-segnet, url: "https://arxiv.org/abs/1511.02680", status: read, label: "Bayesian SegNet" }
+- { id: better-plain-vit-baselines-for, url: "https://arxiv.org/abs/2205.01580", status: read }
+- { id: bootstrap-your-own-latent-a, url: "https://arxiv.org/abs/2006.07733", status: read, area: "Self-supervised learning" }
+- { id: boundary-iou, url: "https://arxiv.org/abs/2103.16562", status: read, label: "Boundary IoU" }
+- { id: boundary-aware-segmentation-network-for, url: "https://arxiv.org/abs/2101.04704", status: read }
+- { id: clip-is-also-an-efficient, url: "https://arxiv.org/abs/2212.09506", status: read }
+- { id: clip-clop, url: "https://arxiv.org/abs/2205.03146", status: read, label: "CLIP-CLOP" }
+- { id: causal-attention-for-vision-language, url: "https://arxiv.org/abs/2103.03493", status: read }
+- { id: challenges-and-opportunities-to-enable, url: "https://arxiv.org/abs/2311.16417", status: read }
+- { id: chameleon, url: "https://arxiv.org/abs/2304.09842", status: read, label: "Chameleon" }
+- { id: cheap-lunch-for-medical-image, url: "https://arxiv.org/abs/2308.14133", status: read, area: "Computer vision" }
+- { id: chiplet-cloud, url: "https://arxiv.org/abs/2307.02666", status: read, label: "Chiplet Cloud" }
+- { id: classification-done-right-for-vision, url: "https://arxiv.org/abs/2411.03313", status: read }
+- { id: classifier-free-diffusion-guidance, url: "https://arxiv.org/abs/2207.12598", status: read, area: "Diffusion models" }
+- { id: codetf, url: "https://arxiv.org/abs/2306.00029", status: read, label: "CodeTF" }
+- { id: cold-diffusion, url: "https://arxiv.org/abs/2208.09392", status: read, label: "Cold Diffusion", area: "Diffusion models" }
+- { id: composer, url: "https://arxiv.org/abs/2302.09778", status: read, label: "Composer" }
+- { id: compositional-visual-generation-with-composable, url: "https://arxiv.org/abs/2206.01714", status: read }
+- { id: convit, url: "https://arxiv.org/abs/2103.10697", status: read, label: "ConViT" }
+- { id: contrastive-masked-autoencoders-are-stronger, url: "https://arxiv.org/abs/2207.13532", status: read }
+- { id: convmae, url: "https://arxiv.org/abs/2205.03892", status: read, label: "ConvMAE", area: "Masked autoencoders" }
+- { id: customized-segment-anything-model-for, url: "https://arxiv.org/abs/2304.13785", status: read, area: "Computer vision" }
+- { id: cyclemlp, url: "https://arxiv.org/abs/2107.10224", status: read, label: "CycleMLP" }
+- { id: data-centric-artificial-intelligence-a, url: "https://arxiv.org/abs/2303.10158", status: read }
+- { id: decoder-denoising-pretraining-for-semantic, url: "https://arxiv.org/abs/2205.11423", status: read }
+- { id: decoders-matter-for-semantic-segmentation, url: "https://arxiv.org/abs/1903.02120", status: read }
+- { id: deep-unsupervised-learning-using-nonequilibrium, url: "https://arxiv.org/abs/1503.03585", status: read }
+- { id: deepcut, url: "https://arxiv.org/abs/2212.05853", status: read, label: "DeepCut" }
+- { id: detco, url: "https://arxiv.org/abs/2102.04803", status: read, label: "DetCo" }
+- { id: detgpt, url: "https://arxiv.org/abs/2305.14167", status: read, label: "DetGPT", area: "Multimodal LLMs" }
+- { id: diffusion-models-for-reinforcement-learning, url: "https://arxiv.org/abs/2311.01223", status: read }
+- { id: diffusion-models-image-super-resolution, url: "https://arxiv.org/abs/2401.00736", status: read }
+- { id: diffusion-policy, url: "https://arxiv.org/abs/2303.04137", status: read, label: "Diffusion Policy" }
+- { id: alphatensor, url: "https://doi.org/10.1038/s41586-022-05172-4", status: read, label: "AlphaTensor" }
+- { id: disentangling-visual-and-written-concepts, url: "https://arxiv.org/abs/2206.07835", status: read }
+- { id: do-as-i-can-not, url: "https://arxiv.org/abs/2204.01691", status: read, area: "Tool use" }
+- { id: dora, url: "https://arxiv.org/abs/2402.09353", status: read, label: "DoRA" }
+- { id: drag-your-gan, url: "https://arxiv.org/abs/2305.10973", status: read, label: "Drag Your GAN" }
+- { id: dreambooth, url: "https://arxiv.org/abs/2208.12242", status: read, label: "DreamBooth" }
+- { id: dual-attention-network-for-scene, url: "https://arxiv.org/abs/1809.02983", status: read }
+- { id: editing-models-with-task-arithmetic, url: "https://arxiv.org/abs/2212.04089", status: read }
+- { id: elucidating-the-design-space-of, url: "https://arxiv.org/abs/2206.00364", status: read, area: "Diffusion models" }
+- { id: emergent-abilities-of-large-language, url: "https://arxiv.org/abs/2206.07682", status: read, area: "Large language models" }
+- { id: emerging-properties-in-self-supervised, url: "https://arxiv.org/abs/2104.14294", status: read }
+- { id: end-to-end-object-detection, url: "https://arxiv.org/abs/2005.12872", status: read }
+- { id: evolution-through-large-models, url: "https://arxiv.org/abs/2206.08896", status: read, area: "Artificial creativity" }
+- { id: evolving-normalization-activation-layers, url: "https://arxiv.org/abs/2004.02967", status: read }
+- { id: exploration-of-tpus-for-ai, url: "https://arxiv.org/abs/2309.08918", status: read }
+- { id: filip, url: "https://arxiv.org/abs/2111.07783", status: read, label: "FILIP", area: "Vision-language pretraining" }
+- { id: from-clip-to-dino-visual, url: "https://arxiv.org/abs/2310.08825", status: read }
+- { id: fast-feedforward-networks, url: "https://arxiv.org/abs/2308.14711", status: read }
+- { id: fast-segment-anything, url: "https://arxiv.org/abs/2306.12156", status: read, area: "Computer vision" }
+- { id: fastmim, url: "https://arxiv.org/abs/2212.06593", status: read, label: "FastMIM" }
+- { id: faster-segment-anything, url: "https://arxiv.org/abs/2306.14289", status: read, label: "Faster Segment Anything", area: "Computer vision" }
+- { id: feature-selective-transformer-for-semantic, url: "https://arxiv.org/abs/2203.14124", status: read }
+- { id: few-shot-medical-image-segmentation, url: "https://arxiv.org/abs/2212.03967", status: read, area: "Computer vision" }
+- { id: fingpt, url: "https://arxiv.org/abs/2306.06031", status: read, label: "FinGPT" }
+- { id: finrl-meta, url: "https://arxiv.org/abs/2211.03107", status: read, label: "FinRL-Meta" }
+- { id: fine-tuning-language-models-with, url: "https://arxiv.org/abs/2305.17333", status: read }
+- { id: flamingo, url: "https://arxiv.org/abs/2204.14198", status: read, label: "Flamingo", area: "Vision-language pretraining" }
+- { id: focal-modulation-networks, url: "https://arxiv.org/abs/2203.11926", status: read }
+- { id: from-r-to-q-your, url: "https://arxiv.org/abs/2404.12358", status: read, area: "Large language models" }
+- { id: fully-self-supervised-learning-for, url: "https://arxiv.org/abs/2202.11981", status: read }
+- { id: glu-variants-improve-transformer, url: "https://arxiv.org/abs/2002.05202", status: read }
+- { id: gpt-4-technical-report, url: "https://arxiv.org/abs/2303.08774", status: read, area: "Large language models" }
+- { id: gpt-fathom, url: "https://arxiv.org/abs/2309.16583", status: read, label: "GPT-Fathom", area: "Large language models" }
+- { id: generalised-dice-overlap-as-a, url: "https://arxiv.org/abs/1707.03237", status: read, area: "Computer vision" }
+- { id: generalized-focal-loss, url: "https://arxiv.org/abs/2006.04388", status: read, label: "Generalized Focal Loss" }
+- { id: gorilla, url: "https://arxiv.org/abs/2305.15334", status: read, label: "Gorilla", area: "Tool use" }
+- { id: graph-neural-networks-are-dynamic, url: "https://arxiv.org/abs/2203.15544", status: read }
+- { id: green-hierarchical-vision-transformer-for, url: "https://arxiv.org/abs/2205.13515", status: read }
+- { id: groupvit, url: "https://arxiv.org/abs/2202.11094", status: read, label: "GroupViT" }
+- { id: guide-your-agent-with-adaptive, url: "https://arxiv.org/abs/2309.10790", status: read }
+- { id: hiera, url: "https://arxiv.org/abs/2306.00989", status: read, label: "Hiera" }
+- { id: hierarchical-text-conditional-image-generation, url: "https://arxiv.org/abs/2204.06125", status: read }
+- { id: hierarchical-transformers-are-more-efficient, url: "https://arxiv.org/abs/2110.13711", status: read }
+- { id: highly-accurate-dichotomous-image-segmentation, url: "https://arxiv.org/abs/2203.03041", status: read }
+- { id: highway-networks, url: "https://arxiv.org/abs/1505.00387", status: read }
+- { id: histopathology-datasetgan-synthesizing-large-resolution, url: "https://arxiv.org/abs/2207.02712", status: read }
+- { id: honeybee, url: "https://arxiv.org/abs/2312.06742", status: read, label: "Honeybee" }
+- { id: hugginggpt, url: "https://arxiv.org/abs/2303.17580", status: read, label: "HuggingGPT", area: "Tool use" }
+- { id: ice, url: "https://arxiv.org/abs/2103.16364", status: read, label: "ICE" }
+- { id: imagebind, url: "https://arxiv.org/abs/2305.05665", status: read, label: "ImageBind", area: "Vision-language pretraining" }
+- { id: image-segmentation-using-text-and, url: "https://arxiv.org/abs/2112.10003", status: read }
+- { id: image-as-a-foreign-language, url: "https://arxiv.org/abs/2208.10442", status: read, area: "Vision-language pretraining" }
+- { id: improved-baselines-with-momentum-contrastive, url: "https://arxiv.org/abs/2003.04297", status: read }
+- { id: improving-clip-robustness-with-knowledge, url: "https://arxiv.org/abs/2309.10361", status: read, area: "Vision-language pretraining" }
+- { id: improving-diffusion-model-efficiency-through, url: "https://arxiv.org/abs/2207.04316", status: read }
+- { id: improving-reinforcement-learning-from-human, url: "https://arxiv.org/abs/2401.16635", status: read, area: "Large language models" }
+- { id: instance-aware-semantic-segmentation-via, url: "https://arxiv.org/abs/1512.04412", status: read }
+- { id: instructblip, url: "https://arxiv.org/abs/2305.06500", status: read, label: "InstructBLIP", area: "Multimodal LLMs" }
+- { id: instructpix2pix, url: "https://arxiv.org/abs/2211.09800", status: read, label: "InstructPix2Pix" }
+- { id: interngpt, url: "https://arxiv.org/abs/2305.05662", status: read, label: "InternGPT", area: "Multimodal LLMs" }
+- { id: is-attention-better-than-matrix, url: "https://arxiv.org/abs/2109.04553", status: read }
+- { id: kosmos-2, url: "https://arxiv.org/abs/2306.14824", status: read, label: "Kosmos-2", area: "Multimodal LLMs" }
+- { id: lerf, url: "https://arxiv.org/abs/2303.09553", status: read, label: "LERF" }
+- { id: lime, url: "https://arxiv.org/abs/2312.09256", status: read, label: "LIME" }
+- { id: llm-in-a-flash-efficient, url: "https://arxiv.org/abs/2312.11514", status: read, area: "Large language models" }
+- { id: llama, url: "https://arxiv.org/abs/2302.13971", status: read, label: "LLaMA", area: "Large language models" }
+- { id: llama-adapter-v2, url: "https://arxiv.org/abs/2304.15010", status: read, label: "LLaMA-Adapter V2", area: "Multimodal LLMs" }
+- { id: llama-adapter, url: "https://arxiv.org/abs/2303.16199", status: read, label: "LLaMA-Adapter" }
+- { id: lm-nav, url: "https://arxiv.org/abs/2207.04429", status: read, label: "LM-Nav" }
+- { id: landmark-attention, url: "https://arxiv.org/abs/2305.16300", status: read, label: "Landmark Attention", area: "Large language models" }
+- { id: language-is-not-all-you, url: "https://arxiv.org/abs/2302.14045", status: read }
+- { id: language-model-cascades, url: "https://arxiv.org/abs/2207.10342", status: read, area: "Large language models" }
+- { id: language-driven-representation-learning-for, url: "https://arxiv.org/abs/2302.12766", status: read }
+- { id: lawin-transformer, url: "https://arxiv.org/abs/2201.01615", status: read, label: "Lawin Transformer" }
+- { id: learning-to-drive-in-a, url: "https://arxiv.org/abs/1807.00412", status: read }
+- { id: learning-to-reason-and-memorize, url: "https://arxiv.org/abs/2305.00833", status: read, area: "Large language models" }
+- { id: learning-to-segment-3d-point, url: "https://arxiv.org/abs/2003.05593", status: read }
+- { id: learning-without-forgetting, url: "https://arxiv.org/abs/1606.09282", status: read }
+- { id: let-s-verify-step-by, url: "https://arxiv.org/abs/2305.20050", status: read, area: "Large language models" }
+- { id: linknet, url: "https://arxiv.org/abs/1707.03718", status: read, label: "LinkNet" }
+- { id: longnet, url: "https://arxiv.org/abs/2307.02486", status: read, label: "LongNet" }
+- { id: mcanet, url: "https://arxiv.org/abs/2312.08866", status: read, label: "MCANet" }
+- { id: mme, url: "https://arxiv.org/abs/2306.13394", status: read, label: "MME", area: "Multimodal LLMs" }
+- { id: maskplace, url: "https://arxiv.org/abs/2211.13382", status: read, label: "MaskPlace" }
+- { id: masked-autoencoders-that-listen, url: "https://arxiv.org/abs/2207.06405", status: read }
+- { id: masked-feature-prediction-for-self, url: "https://arxiv.org/abs/2112.09133", status: read }
+- { id: masked-attention-mask-transformer-for, url: "https://arxiv.org/abs/2112.01527", status: read }
+- { id: maxvit, url: "https://arxiv.org/abs/2204.01697", status: read, label: "MaxViT" }
+- { id: medsegdiff, url: "https://arxiv.org/abs/2211.00611", status: read, label: "MedSegDiff" }
+- { id: medsegdiff-v2, url: "https://arxiv.org/abs/2301.11798", status: read, label: "MedSegDiff-V2" }
+- { id: mixnmatch, url: "https://arxiv.org/abs/1911.11758", status: read, label: "MixNMatch" }
+- { id: mixture-of-experts-meets-instruction, url: "https://arxiv.org/abs/2305.14705", status: read, area: "Large language models" }
+- { id: mobilevit, url: "https://arxiv.org/abs/2110.02178", status: read, label: "MobileViT", area: "Computer vision" }
+- { id: model-cards-for-model-reporting, url: "https://arxiv.org/abs/1810.03993", status: read }
+- { id: model-rubik-s-cube, url: "https://arxiv.org/abs/2010.14819", status: read, label: "Model Rubik's Cube" }
+- { id: monocular-arbitrary-moving-object-discovery, url: "https://doi.org/10.5244/c.35.407", status: read }
+- { id: movie-gen, url: "https://arxiv.org/abs/2410.13720", status: read, label: "Movie Gen" }
+- { id: multi-class-token-transformer-for, url: "https://arxiv.org/abs/2203.02891", status: read }
+- { id: multi-dataset-pretraining-a-unified, url: "https://arxiv.org/abs/2106.04121", status: read }
+- { id: multimae, url: "https://arxiv.org/abs/2204.01678", status: read, label: "MultiMAE" }
+- { id: nms-strikes-back, url: "https://arxiv.org/abs/2212.06137", status: read }
+- { id: netadapt, url: "https://arxiv.org/abs/1804.03230", status: read, label: "NetAdapt" }
+- { id: neural-network-diffusion, url: "https://arxiv.org/abs/2402.13144", status: read }
+- { id: neural-networks-are-decision-trees, url: "https://arxiv.org/abs/2210.05189", status: read }
+- { id: offline-reinforcement-learning-as-one, url: "https://arxiv.org/abs/2106.02039", status: read }
+- { id: on-power-jaccard-losses-for, url: "https://doi.org/10.5220/0010304005610568", status: read, area: "Computer vision" }
+- { id: on-the-planning-abilities-of, url: "https://arxiv.org/abs/2305.15771", status: read, area: "Large language models" }
+- { id: on-the-test-time-zero, url: "https://arxiv.org/abs/2405.02266", status: read }
+- { id: one-for-all, url: "https://arxiv.org/abs/2306.07967", status: read, label: "One-for-All", area: "Fine-tuning, architectures & compute" }
+- { id: oneformer, url: "https://arxiv.org/abs/2211.06220", status: read, label: "OneFormer" }
+- { id: online-decision-transformer, url: "https://arxiv.org/abs/2202.05607", status: read }
+- { id: openfashionclip, url: "https://arxiv.org/abs/2309.05551", status: read, label: "OpenFashionCLIP" }
+- { id: panet, url: "https://arxiv.org/abs/1908.06391", status: read, label: "PANet" }
+- { id: parameter-efficient-fine-tuning-design, url: "https://arxiv.org/abs/2301.01821", status: read }
+- { id: pvt-v2, url: "https://arxiv.org/abs/2106.13797", status: read, label: "PVT v2" }
+- { id: palm-e, url: "https://arxiv.org/abs/2303.03378", status: read, label: "PaLM-E", area: "Multimodal LLMs" }
+- { id: palette, url: "https://arxiv.org/abs/2111.05826", status: read, label: "Palette", area: "Diffusion models" }
+- { id: panoptic-segmentation, url: "https://arxiv.org/abs/1801.00868", status: read }
+- { id: parameter-efficient-transfer-learning-for, url: "https://arxiv.org/abs/1902.00751", status: read }
+- { id: path-to-medical-agi-unify, url: "https://arxiv.org/abs/2306.10765", status: read }
+- { id: per-pixel-classification-is-not, url: "https://arxiv.org/abs/2107.06278", status: read }
+- { id: personal-llm-agents, url: "https://arxiv.org/abs/2401.05459", status: read, label: "Personal LLM Agents" }
+- { id: photorealistic-text-to-image-diffusion, url: "https://arxiv.org/abs/2205.11487", status: read, area: "Diffusion models" }
+- { id: pixel-aligned-language-models, url: "https://arxiv.org/abs/2312.09237", status: read }
+- { id: planning-with-diffusion-for-flexible, url: "https://arxiv.org/abs/2205.09991", status: read }
+- { id: point-e, url: "https://arxiv.org/abs/2212.08751", status: read, label: "Point-E" }
+- { id: polyloss, url: "https://arxiv.org/abs/2204.12511", status: read, label: "PolyLoss" }
+- { id: position-prediction-as-an-effective, url: "https://arxiv.org/abs/2207.07611", status: read }
+- { id: pretrained-transformers-as-universal-computation, url: "https://arxiv.org/abs/2103.05247", status: read }
+- { id: pretraining-language-models-with-human, url: "https://arxiv.org/abs/2302.08582", status: read }
+- { id: primer, url: "https://arxiv.org/abs/2109.08668", status: read, label: "Primer" }
+- { id: pyramid-vision-transformer-a-versatile, url: "https://arxiv.org/abs/2102.12122", status: read }
+- { id: q-transformer, url: "https://arxiv.org/abs/2309.10150", status: read, label: "Q-Transformer" }
+- { id: r-llava, url: "https://arxiv.org/abs/2410.20327", status: read, label: "R-LLaVA" }
+- { id: rwkv, url: "https://arxiv.org/abs/2305.13048", status: read, label: "RWKV" }
+- { id: rapid-exploration-for-open-world, url: "https://arxiv.org/abs/2104.05859", status: read }
+- { id: reinforcement-learning-from-passive-data, url: "https://arxiv.org/abs/2304.04782", status: read }
+- { id: reliability-in-semantic-segmentation-can, url: "https://arxiv.org/abs/2312.09231", status: read }
+- { id: repurposing-diffusion-based-image-generators, url: "https://arxiv.org/abs/2312.02145", status: read }
+- { id: rethinking-semantic-segmentation-from-a, url: "https://arxiv.org/abs/2012.15840", status: read }
+- { id: revisiting-cyclegan-for-semi-supervised, url: "https://arxiv.org/abs/1908.11569", status: read }
+- { id: revisiting-multi-scale-feature-fusion, url: "https://arxiv.org/abs/2203.12683", status: read }
+- { id: roformer, url: "https://arxiv.org/abs/2104.09864", status: read, label: "RoFormer" }
+- { id: robust-and-efficient-medical-imaging, url: "https://arxiv.org/abs/2205.09723", status: read }
+- { id: scalecrafter, url: "https://arxiv.org/abs/2310.07702", status: read, label: "ScaleCrafter" }
+- { id: self-pre-training-with-masked, url: "https://arxiv.org/abs/2203.05573", status: read, area: "Computer vision" }
+- { id: slicegpt, url: "https://arxiv.org/abs/2401.15024", status: read, label: "SliceGPT" }
+- { id: scalable-adaptive-computation-for-iterative, url: "https://arxiv.org/abs/2212.11972", status: read }
+- { id: scaling-down-to-scale-up, url: "https://arxiv.org/abs/2303.15647", status: read }
+- { id: scaling-language-image-pre-training, url: "https://arxiv.org/abs/2212.00794", status: read, area: "Vision-language pretraining" }
+- { id: scaling-up-visual-and-vision, url: "https://arxiv.org/abs/2102.05918", status: read }
+- { id: scaling-vision-transformers-to-gigapixel, url: "https://arxiv.org/abs/2206.02647", status: read }
+- { id: scaling-up-gans-for-text, url: "https://arxiv.org/abs/2303.05511", status: read }
+- { id: segformer, url: "https://arxiv.org/abs/2105.15203", status: read, label: "SegFormer" }
+- { id: seggpt, url: "https://arxiv.org/abs/2304.03284", status: read, label: "SegGPT", area: "Computer vision" }
+- { id: segnext, url: "https://arxiv.org/abs/2209.08575", status: read, label: "SegNeXt" }
+- { id: segmenter, url: "https://arxiv.org/abs/2105.05633", status: read, label: "Segmenter" }
+- { id: self-attention-between-datapoints-going, url: "https://arxiv.org/abs/2106.02584", status: read }
+- { id: self-play-fine-tuning-converts, url: "https://arxiv.org/abs/2401.01335", status: read, area: "Large language models" }
+- { id: self-rewarding-language-models, url: "https://arxiv.org/abs/2401.10020", status: read, area: "Large language models" }
+- { id: self-playing-adversarial-language-game, url: "https://arxiv.org/abs/2404.10642", status: read }
+- { id: self-supervised-equivariant-attention-mechanism, url: "https://arxiv.org/abs/2004.04581", status: read }
+- { id: self-supervision-with-superpixels-training, url: "https://arxiv.org/abs/2007.09886", status: read }
+- { id: semantic-image-segmentation-two-decades, url: "https://arxiv.org/abs/2302.06378", status: read }
+- { id: semi-supervised-semantic-segmentation-needs, url: "https://arxiv.org/abs/1906.01916", status: read }
+- { id: separable-self-attention-for-mobile, url: "https://arxiv.org/abs/2206.02680", status: read }
+- { id: separate-and-enhance, url: "https://arxiv.org/abs/2312.06712", status: read, label: "Separate-and-Enhance" }
+- { id: sit, url: "https://arxiv.org/abs/2401.08740", status: read, label: "SiT" }
+- { id: softmax-free-linear-transformers, url: "https://arxiv.org/abs/2207.03341", status: read }
+- { id: soup-of-experts, url: "https://arxiv.org/abs/2502.01804", status: read, label: "Soup-of-Experts" }
+- { id: spatial-dual-modality-graph-reasoning, url: "https://arxiv.org/abs/2103.14470", status: read }
+- { id: swin-transformer, url: "https://arxiv.org/abs/2103.14030", status: read, label: "Swin Transformer" }
+- { id: swin-unet, url: "https://arxiv.org/abs/2105.05537", status: read, label: "Swin-Unet", area: "Computer vision" }
+- { id: switch-transformers, url: "https://arxiv.org/abs/2101.03961", status: read, label: "Switch Transformers" }
+- { id: symbolic-discovery-of-optimization-algorithms, url: "https://arxiv.org/abs/2302.06675", status: read }
+- { id: torch-fx, url: "https://arxiv.org/abs/2112.08429", status: read, label: "torch.fx" }
+- { id: text-guided-synthesis-of-artistic, url: "https://arxiv.org/abs/2207.13038", status: read }
+- { id: the-lottery-ticket-hypothesis-finding, url: "https://arxiv.org/abs/1803.03635", status: read }
+- { id: the-phenomenon-of-policy-churn, url: "https://arxiv.org/abs/2206.00730", status: read }
+- { id: the-pile, url: "https://arxiv.org/abs/2101.00027", status: read, label: "The Pile" }
+- { id: the-reversal-curse, url: "https://arxiv.org/abs/2309.12288", status: read, label: "The Reversal Curse", area: "Large language models" }
+- { id: the-unreasonable-ineffectiveness-of-the, url: "https://arxiv.org/abs/2403.17887", status: read }
+- { id: thought-cloning, url: "https://arxiv.org/abs/2306.00323", status: read, label: "Thought Cloning" }
+- { id: three-dimensional-planar-model-estimation, url: "https://arxiv.org/abs/1708.01143", status: read }
+- { id: titans, url: "https://arxiv.org/abs/2501.00663", status: read, label: "Titans" }
+- { id: tool-learning-with-foundation-models, url: "https://arxiv.org/abs/2304.08354", status: read, area: "Tool use" }
+- { id: towards-robust-monocular-depth-estimation, url: "https://arxiv.org/abs/1907.01341", status: read }
+- { id: transfuse, url: "https://arxiv.org/abs/2102.08005", status: read, label: "TransFuse", area: "Computer vision" }
+- { id: vpgtrans, url: "https://arxiv.org/abs/2305.01278", status: read, label: "VPGTrans" }
+- { id: transformer-based-visual-segmentation-a, url: "https://arxiv.org/abs/2304.09854", status: read, area: "Computer vision" }
+- { id: transformers-are-sample-efficient-world, url: "https://arxiv.org/abs/2209.00588", status: read, area: "World models" }
+- { id: transformers-without-normalization, url: "https://arxiv.org/abs/2503.10622", status: read }
+- { id: transfusion, url: "https://arxiv.org/abs/2408.11039", status: read, label: "Transfusion" }
+- { id: tree-of-thoughts, url: "https://arxiv.org/abs/2305.10601", status: read, label: "Tree of Thoughts", area: "Large language models" }
+- { id: trivialaugment, url: "https://arxiv.org/abs/2103.10158", status: read, label: "TrivialAugment" }
+- { id: tversky-loss-function-for-image, url: "https://arxiv.org/abs/1706.05721", status: read, area: "Computer vision" }
+- { id: u2-net, url: "https://arxiv.org/abs/2005.09007", status: read, label: "U2-Net" }
+- { id: u-net-based-skeletonization-and, url: "https://doi.org/10.1109/iccvw54120.2021.00238", status: read }
+- { id: u-net, url: "https://arxiv.org/abs/1505.04597", status: read, label: "U-Net", area: "Computer vision" }
+- { id: unetformer, url: "https://arxiv.org/abs/2204.00631", status: read, label: "UNetFormer", area: "Computer vision" }
+- { id: understanding-diffusion-models-a-unified, url: "https://arxiv.org/abs/2208.11970", status: read, area: "Diffusion models" }
+- { id: understanding-ssim, url: "https://arxiv.org/abs/2006.13846", status: read }
+- { id: understanding-the-robustness-in-vision, url: "https://arxiv.org/abs/2204.12451", status: read }
+- { id: unlimited-size-diffusion-restoration, url: "https://arxiv.org/abs/2303.00354", status: read }
+- { id: unsupervised-universal-image-segmentation, url: "https://arxiv.org/abs/2312.17243", status: read, area: "Computer vision" }
+- { id: vl-beit, url: "https://arxiv.org/abs/2206.01127", status: read, label: "VL-BEiT", area: "Vision-language pretraining" }
+- { id: vector-quantized-image-modeling-with, url: "https://arxiv.org/abs/2110.04627", status: read }
+- { id: ving, url: "https://arxiv.org/abs/2012.09812", status: read, label: "ViNG" }
+- { id: vitgan, url: "https://arxiv.org/abs/2107.04589", status: read, label: "ViTGAN" }
+- { id: video-diffusion-models, url: "https://arxiv.org/abs/2204.03458", status: read, area: "Diffusion models" }
+- { id: vision-transformers-need-registers, url: "https://arxiv.org/abs/2309.16588", status: read }
+- { id: visual-attention-network, url: "https://arxiv.org/abs/2202.09741", status: read }
+- { id: visual-instruction-tuning, url: "https://arxiv.org/abs/2304.08485", status: read, area: "Multimodal LLMs" }
+- { id: visual-language-pretrained-multiple-instance, url: "https://arxiv.org/abs/2306.07831", status: read }
+- { id: what-algorithms-can-transformers-learn, url: "https://arxiv.org/abs/2310.16028", status: read, area: "Large language models" }
+- { id: what-matters-when-building-vision, url: "https://arxiv.org/abs/2405.02246", status: read }
+- { id: why-can-gpt-learn-in, url: "https://arxiv.org/abs/2212.10559", status: read }
+- { id: zero-shot-text-to-image, url: "https://arxiv.org/abs/2102.12092", status: read }
+- { id: longllava, url: "https://arxiv.org/abs/2409.02889", status: read, label: "LongLLaVA" }
+- { id: infinity-diff, url: "https://arxiv.org/abs/2303.18242", status: read, label: "∞-Diff" }
+- id: path-towards-autonomous-machine-intelligence
+  title: "A Path Towards Autonomous Machine Intelligence"
+  authors: "Yann LeCun"
+  year: 2022
+  venue: "OpenReview"
+  url: "https://openreview.net/forum?id=BZ5a1r-kVsf"
+  status: read
+- id: hidden-technical-debt
+  title: "Hidden Technical Debt in Machine Learning Systems"
+  authors: "D. Sculley et al."
+  year: 2015
+  venue: "NeurIPS"
+  url: "https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html"
+  status: read
+# Curiosity & exploration
+- { id: diayn, url: "https://arxiv.org/abs/1802.06070", status: read, label: "DIAYN", area: "Curiosity & exploration" }
+# Artificial creativity
+- { id: creative-adversarial-networks, url: "https://arxiv.org/abs/1706.07068", status: read, label: "CAN", area: "Artificial creativity" }
+# World models
+- { id: on-learning-to-think, url: "https://arxiv.org/abs/1511.09249", status: read, label: "On Learning to Think", area: "World models" }
+- { id: imagination-augmented-agents, url: "https://arxiv.org/abs/1707.06203", status: read, label: "I2A", area: "World models" }
+# Style transfer
+- { id: image-analogies, url: "https://doi.org/10.1145/383259.383295", status: read, label: "Image Analogies", area: "Style transfer" }
+- { id: saliency-maps, url: "https://arxiv.org/abs/1312.6034", status: read, label: "Saliency maps", area: "Style transfer" }
+- { id: neural-style, url: "https://arxiv.org/abs/1508.06576", status: read, label: "Neural style", area: "Style transfer" }
+- { id: texture-networks, url: "https://arxiv.org/abs/1603.03417", status: read, label: "Texture Networks", area: "Style transfer" }
+- { id: perceptual-losses, url: "https://arxiv.org/abs/1603.08155", status: read, label: "Perceptual losses", area: "Style transfer" }
+- { id: preserving-color-style-transfer, url: "https://arxiv.org/abs/1606.05897", status: read, label: "Preserving color", area: "Style transfer" }
+- { id: instance-normalization, url: "https://arxiv.org/abs/1607.08022", status: read, label: "Instance norm", area: "Style transfer" }
+- { id: learned-representation-artistic-style, url: "https://arxiv.org/abs/1610.07629", status: read, label: "Conditional instance norm", area: "Style transfer" }
+- { id: controlling-perceptual-factors, url: "https://arxiv.org/abs/1611.07865", status: read, label: "Controlling perceptual factors", area: "Style transfer" }
+- { id: pix2pix, url: "https://arxiv.org/abs/1611.07004", status: read, label: "pix2pix", area: "Style transfer" }
+- { id: demystifying-neural-style-transfer, url: "https://arxiv.org/abs/1701.01036", status: read, label: "Demystifying NST", area: "Style transfer" }
+- { id: cyclegan, url: "https://arxiv.org/abs/1703.10593", status: read, label: "CycleGAN", area: "Style transfer" }
+- { id: neural-style-transfer-review, url: "https://arxiv.org/abs/1705.04058", status: read, label: "NST review", area: "Style transfer" }
+- { id: universal-style-transfer, url: "https://arxiv.org/abs/1705.08086", status: read, label: "WCT", area: "Style transfer" }
+# Schmidhuber
+- { id: one-big-net, url: "https://arxiv.org/abs/1802.08864", status: read, label: "One Big Net", area: "World models" }
+- { id: lstm, url: "https://doi.org/10.1162/neco.1997.9.8.1735", status: read, label: "LSTM" }
+- { id: training-very-deep-networks, url: "https://arxiv.org/abs/1507.06228", status: read, label: "Training very deep networks" }
+# Foundational deep learning, 2016-2020
+- { id: resnet, url: "https://arxiv.org/abs/1512.03385", status: read, label: "ResNet", area: "Computer vision" }
+- { id: identity-mappings-resnet, url: "https://arxiv.org/abs/1603.05027", status: read, label: "Identity mappings", area: "Computer vision" }
+- { id: densenet, url: "https://arxiv.org/abs/1608.06993", status: read, label: "DenseNet", area: "Computer vision" }
+- { id: resnext, url: "https://arxiv.org/abs/1611.05431", status: read, label: "ResNeXt" }
+- { id: xception, url: "https://arxiv.org/abs/1610.02357", status: read, label: "Xception", area: "Computer vision" }
+- { id: squeezenet, url: "https://arxiv.org/abs/1602.07360", status: read, label: "SqueezeNet", area: "Computer vision" }
+- { id: non-local-neural-networks, url: "https://arxiv.org/abs/1711.07971", status: read, label: "Non-local networks" }
+- { id: capsules, url: "https://arxiv.org/abs/1710.09829", status: read, label: "Capsules" }
+- { id: yolo, url: "https://arxiv.org/abs/1506.02640", status: read, label: "YOLO", area: "Computer vision" }
+- { id: ssd, url: "https://arxiv.org/abs/1512.02325", status: read, label: "SSD", area: "Computer vision" }
+- { id: feature-pyramid-networks, url: "https://arxiv.org/abs/1612.03144", status: read, label: "FPN", area: "Computer vision" }
+- { id: mask-r-cnn, url: "https://arxiv.org/abs/1703.06870", status: read, label: "Mask R-CNN", area: "Computer vision" }
+- { id: focal-loss, url: "https://arxiv.org/abs/1708.02002", status: read, label: "Focal loss" }
+- { id: deeplab, url: "https://arxiv.org/abs/1606.00915", status: read, label: "DeepLab", area: "Computer vision" }
+- { id: pspnet, url: "https://arxiv.org/abs/1612.01105", status: read, label: "PSPNet", area: "Computer vision" }
+- { id: deeplabv3, url: "https://arxiv.org/abs/1706.05587", status: read, label: "DeepLabv3", area: "Computer vision" }
+- { id: v-net, url: "https://arxiv.org/abs/1606.04797", status: read, label: "V-Net", area: "Computer vision" }
+- { id: grad-cam, url: "https://arxiv.org/abs/1610.02391", status: read, label: "Grad-CAM" }
+- { id: mixup, url: "https://arxiv.org/abs/1710.09412", status: read, label: "mixup" }
+- { id: dropout-bayesian, url: "https://arxiv.org/abs/1506.02142", status: read, label: "MC dropout" }
+- { id: pgd-adversarial, url: "https://arxiv.org/abs/1706.06083", status: read, label: "PGD" }
+- { id: concrete-problems-ai-safety, url: "https://arxiv.org/abs/1606.06565", status: read, label: "Concrete problems in AI safety" }
+- { id: neural-architecture-search-rl, url: "https://arxiv.org/abs/1611.01578", status: read, label: "NAS" }
+- { id: maml, url: "https://arxiv.org/abs/1703.03400", status: read, label: "MAML" }
+- { id: differentiable-neural-computer, url: "https://doi.org/10.1038/nature20101", status: read, label: "DNC" }
+- { id: vq-vae, url: "https://arxiv.org/abs/1711.00937", status: read, label: "VQ-VAE" }
+- { id: dcgan, url: "https://arxiv.org/abs/1511.06434", status: read, label: "DCGAN", area: "GANs" }
+- { id: improved-gan-training, url: "https://arxiv.org/abs/1606.03498", status: read, label: "Improved GAN training", area: "GANs" }
+- { id: infogan, url: "https://arxiv.org/abs/1606.03657", status: read, label: "InfoGAN", area: "GANs" }
+- { id: wgan-gp, url: "https://arxiv.org/abs/1704.00028", status: read, label: "WGAN-GP", area: "GANs" }
+- { id: progressive-gan, url: "https://arxiv.org/abs/1710.10196", status: read, label: "Progressive GAN", area: "GANs" }
+- { id: attention-is-all-you-need, url: "https://arxiv.org/abs/1706.03762", status: read, label: "Transformer" }
+- { id: bert, url: "https://arxiv.org/abs/1810.04805", status: read, label: "BERT" }
+- { id: a3c, url: "https://arxiv.org/abs/1602.01783", status: read, label: "A3C" }
+- { id: dueling-dqn, url: "https://arxiv.org/abs/1511.06581", status: read, label: "Dueling DQN" }
+- { id: prioritized-experience-replay, url: "https://arxiv.org/abs/1511.05952", status: read, label: "Prioritized replay" }
+- { id: distributional-rl-c51, url: "https://arxiv.org/abs/1707.06887", status: read, label: "C51" }
+- { id: hindsight-experience-replay, url: "https://arxiv.org/abs/1707.01495", status: read, label: "HER" }
+- { id: rainbow, url: "https://arxiv.org/abs/1710.02298", status: read, label: "Rainbow" }
+- { id: ppo, url: "https://arxiv.org/abs/1707.06347", status: read, label: "PPO" }
+# CNN architectures
+- { id: inception-v3, url: "https://arxiv.org/abs/1512.00567", status: read, label: "Inception v3", area: "Computer vision" }
+- { id: inception-v4, url: "https://arxiv.org/abs/1602.07261", status: read, label: "Inception-v4" }
+- { id: wide-resnet, url: "https://arxiv.org/abs/1605.07146", status: read, label: "Wide ResNet", area: "Computer vision" }
+- { id: stochastic-depth, url: "https://arxiv.org/abs/1603.09382", status: read, label: "Stochastic depth" }
+- { id: fractalnet, url: "https://arxiv.org/abs/1605.07648", status: read, label: "FractalNet" }
+- { id: dilated-convolutions, url: "https://arxiv.org/abs/1511.07122", status: read, label: "Dilated convolutions", area: "Computer vision" }
+- { id: spatial-transformer-networks, url: "https://arxiv.org/abs/1506.02025", status: read, label: "Spatial transformers" }
+- { id: conv-arithmetic, url: "https://arxiv.org/abs/1603.07285", status: read, label: "Convolution arithmetic" }
+- { id: dual-path-networks, url: "https://arxiv.org/abs/1707.01629", status: read, label: "DPN" }
+- { id: nasnet, url: "https://arxiv.org/abs/1707.07012", status: read, label: "NASNet" }
+- { id: large-scale-evolution-classifiers, url: "https://arxiv.org/abs/1703.01041", status: read, label: "Evolved image classifiers" }
+- { id: enas, url: "https://arxiv.org/abs/1802.03268", status: read, label: "ENAS" }
+- { id: swish, url: "https://arxiv.org/abs/1710.05941", status: read, label: "Swish" }
+- { id: net2net, url: "https://arxiv.org/abs/1511.05641", status: read, label: "Net2Net" }
+# Detection and segmentation
+- { id: faster-r-cnn, url: "https://arxiv.org/abs/1506.01497", status: read, label: "Faster R-CNN", area: "Computer vision" }
+- { id: r-fcn, url: "https://arxiv.org/abs/1605.06409", status: read, label: "R-FCN", area: "Computer vision" }
+- { id: yolo9000, url: "https://arxiv.org/abs/1612.08242", status: read, label: "YOLO9000" }
+- { id: yolov3, url: "https://arxiv.org/abs/1804.02767", status: read, label: "YOLOv3" }
+- { id: speed-accuracy-detectors, url: "https://arxiv.org/abs/1611.10012", status: read, label: "Detector speed/accuracy trade-offs" }
+- { id: segnet, url: "https://arxiv.org/abs/1511.00561", status: read, label: "SegNet", area: "Computer vision" }
+- { id: enet, url: "https://arxiv.org/abs/1606.02147", status: read, label: "ENet" }
+- { id: refinenet, url: "https://arxiv.org/abs/1611.06612", status: read, label: "RefineNet", area: "Computer vision" }
+# Adversarial networks on images
+- { id: gan, url: "https://arxiv.org/abs/1406.2661", status: read, label: "GAN", area: "GANs" }
+- { id: conditional-gan, url: "https://arxiv.org/abs/1411.1784", status: read, label: "cGAN", area: "GANs" }
+- { id: f-gan, url: "https://arxiv.org/abs/1606.00709", status: read, label: "f-GAN", area: "GANs" }
+- { id: unrolled-gans, url: "https://arxiv.org/abs/1611.02163", status: read, label: "Unrolled GANs", area: "GANs" }
+- { id: bigan, url: "https://arxiv.org/abs/1605.09782", status: read, label: "BiGAN", area: "GANs" }
+- { id: ali, url: "https://arxiv.org/abs/1606.00704", status: read, label: "ALI", area: "GANs" }
+- { id: ac-gan, url: "https://arxiv.org/abs/1610.09585", status: read, label: "AC-GAN", area: "GANs" }
+- { id: ebgan, url: "https://arxiv.org/abs/1609.03126", status: read, label: "EBGAN", area: "GANs" }
+- { id: lsgan, url: "https://arxiv.org/abs/1611.04076", status: read, label: "LSGAN", area: "GANs" }
+- { id: began, url: "https://arxiv.org/abs/1703.10717", status: read, label: "BEGAN", area: "GANs" }
+- { id: principled-methods-gans, url: "https://arxiv.org/abs/1701.04862", status: read, label: "Principled methods for GANs", area: "GANs" }
+- { id: are-gans-created-equal, url: "https://arxiv.org/abs/1711.10337", status: read, label: "Are GANs created equal?", area: "GANs" }
+- { id: text-to-image-gan, url: "https://arxiv.org/abs/1605.05396", status: read, label: "Text-to-image GAN", area: "GANs" }
+- { id: stackgan, url: "https://arxiv.org/abs/1612.03242", status: read, label: "StackGAN", area: "GANs" }
+- { id: srgan, url: "https://arxiv.org/abs/1609.04802", status: read, label: "SRGAN", area: "GANs" }
+- { id: context-encoders, url: "https://arxiv.org/abs/1604.07379", status: read, label: "Context encoders", area: "GANs" }
+- { id: discogan, url: "https://arxiv.org/abs/1703.05192", status: read, label: "DiscoGAN", area: "GANs" }
+- { id: unit, url: "https://arxiv.org/abs/1703.00848", status: read, label: "UNIT", area: "GANs" }
+- { id: stargan, url: "https://arxiv.org/abs/1711.09020", status: read, label: "StarGAN", area: "GANs" }
+- { id: pix2pixhd, url: "https://arxiv.org/abs/1711.11585", status: read, label: "pix2pixHD", area: "GANs" }
+- { id: pixel-level-domain-adaptation, url: "https://arxiv.org/abs/1612.05424", status: read, label: "PixelDA", area: "GANs" }
+- { id: adversarial-autoencoders, url: "https://arxiv.org/abs/1511.05644", status: read, label: "Adversarial autoencoders", area: "GANs" }
+- { id: explaining-adversarial-examples, url: "https://arxiv.org/abs/1412.6572", status: read, label: "FGSM" }
+- { id: adversarial-patch, url: "https://arxiv.org/abs/1712.09665", status: read, label: "Adversarial patch" }
+# Attention and vision policies for RL
+- { id: recurrent-visual-attention, url: "https://arxiv.org/abs/1406.6247", status: read, label: "Recurrent attention model" }
+- { id: multiple-object-recognition-attention, url: "https://arxiv.org/abs/1412.7755", status: read, label: "DRAM" }
+- { id: show-attend-tell, url: "https://arxiv.org/abs/1502.03044", status: read, label: "Show, Attend and Tell" }
+- { id: draw, url: "https://arxiv.org/abs/1502.04623", status: read, label: "DRAW" }
+- { id: darqn, url: "https://arxiv.org/abs/1512.01693", status: read, label: "DARQN" }
+- { id: dqn-atari, url: "https://arxiv.org/abs/1312.5602", status: read, label: "DQN" }
+- { id: end-to-end-visuomotor, url: "https://arxiv.org/abs/1504.00702", status: read, label: "End-to-end visuomotor policies" }
+- { id: video-prediction-physical-interaction, url: "https://arxiv.org/abs/1605.07157", status: read, label: "Video prediction for interaction" }
+# Neural Statistician and kin
+- { id: neural-statistician, url: "https://arxiv.org/abs/1606.02185", status: read, label: "Neural Statistician", area: "Meta-learning" }
+- { id: memory-augmented-meta-learning, url: "https://arxiv.org/abs/1605.06065", status: read, label: "MANN" }
+- { id: learning-to-learn-gradient-descent, url: "https://arxiv.org/abs/1606.04474", status: read, label: "Learning to learn by GD by GD" }
+- { id: rl-squared, url: "https://arxiv.org/abs/1611.02779", status: read, label: "RL²" }
+- { id: prototypical-networks, url: "https://arxiv.org/abs/1703.05175", status: read, label: "Prototypical networks" }
+- { id: relation-networks, url: "https://arxiv.org/abs/1706.01427", status: read, label: "Relation networks" }
+- { id: vae, url: "https://arxiv.org/abs/1312.6114", status: read, label: "VAE" }
+- { id: inverse-autoregressive-flow, url: "https://arxiv.org/abs/1606.04934", status: read, label: "IAF" }
+- { id: variational-lossy-autoencoder, url: "https://arxiv.org/abs/1611.02731", status: read, label: "Variational lossy autoencoder" }
+# Google Brain
+- { id: tensorflow, url: "https://arxiv.org/abs/1603.04467", status: read, label: "TensorFlow" }
+- { id: hypernetworks, url: "https://arxiv.org/abs/1609.09106", status: read, label: "HyperNetworks" }
+- { id: one-model-to-learn-them-all, url: "https://arxiv.org/abs/1706.05137", status: read, label: "MultiModel" }
+- { id: neural-gpus, url: "https://arxiv.org/abs/1511.08228", status: read, label: "Neural GPUs" }
+- { id: pointer-networks, url: "https://arxiv.org/abs/1506.03134", status: read, label: "Pointer networks" }
+- { id: listen-attend-spell, url: "https://arxiv.org/abs/1508.01211", status: read, label: "Listen, Attend and Spell" }
+- { id: limits-of-language-modeling, url: "https://arxiv.org/abs/1602.02410", status: read, label: "Limits of language modeling" }
+- { id: image-transformer, url: "https://arxiv.org/abs/1802.05751", status: read, label: "Image Transformer" }
+- { id: neural-optimizer-search, url: "https://arxiv.org/abs/1709.07417", status: read, label: "Neural optimizer search" }
+- { id: smoothgrad, url: "https://arxiv.org/abs/1706.03825", status: read, label: "SmoothGrad" }
+# Seminal papers
+- { id: batch-normalization, url: "https://arxiv.org/abs/1502.03167", status: read, label: "Batch norm", title: "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift" }
+- { id: adam, url: "https://arxiv.org/abs/1412.6980", status: read, label: "Adam", title: "Adam: A Method for Stochastic Optimization" }
+- { id: dropout, url: "https://jmlr.org/papers/v15/srivastava14a.html", status: read, label: "Dropout", title: "Dropout: A Simple Way to Prevent Neural Networks from Overfitting", authors: "Nitish Srivastava et al.", year: 2014, venue: "JMLR" }
+- { id: layer-normalization, url: "https://arxiv.org/abs/1607.06450", status: read, label: "Layer norm" }
+- { id: distilling-knowledge, url: "https://arxiv.org/abs/1503.02531", status: read, label: "Distillation" }
+- { id: seq2seq, url: "https://arxiv.org/abs/1409.3215", status: read, label: "seq2seq" }
+- { id: bahdanau-attention, url: "https://arxiv.org/abs/1409.0473", status: read, label: "Bahdanau attention", title: "Neural Machine Translation by Jointly Learning to Align and Translate" }
+- { id: dqn-nature, url: "https://doi.org/10.1038/nature14236", status: read, label: "DQN (Nature)", title: "Human-level control through deep reinforcement learning" }
+- { id: gpt-2, url: "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf", status: read, label: "GPT-2", title: "Language Models are Unsupervised Multitask Learners", authors: "Alec Radford et al.", year: 2019, venue: "OpenAI" }
+- { id: gpt-3, url: "https://arxiv.org/abs/2005.14165", status: read, label: "GPT-3" }
+- { id: instructgpt, url: "https://arxiv.org/abs/2203.02155", status: read, label: "InstructGPT", area: "Large language models" }
+- { id: clip, url: "https://arxiv.org/abs/2103.00020", status: read, label: "CLIP", title: "Learning Transferable Visual Models From Natural Language Supervision" }
+- { id: blip, url: "https://arxiv.org/abs/2201.12086", status: read, label: "BLIP", title: "BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation" }
+- { id: mae, url: "https://arxiv.org/abs/2111.06377", status: read, label: "MAE", title: "Masked Autoencoders Are Scalable Vision Learners" }
+- { id: ddpm, url: "https://arxiv.org/abs/2006.11239", status: read, label: "DDPM", area: "Diffusion models" }
+- { id: latent-diffusion, url: "https://arxiv.org/abs/2112.10752", status: read, label: "Latent diffusion", title: "High-Resolution Image Synthesis with Latent Diffusion Models" }
+- { id: machine-theory-of-mind, url: "https://arxiv.org/abs/1802.07740", status: read, label: "Machine Theory of Mind", title: "Machine Theory of Mind", authors: "Neil C. Rabinowitz et al.", year: 2018, venue: "ICML" }
+# Minds and agents (2014-2019)
+- { id: machines-that-learn-like-people, url: "https://arxiv.org/abs/1604.00289", status: read, label: "Machines that learn like people", title: "Building Machines That Learn and Think Like People" }
+- { id: relational-rnns, url: "https://arxiv.org/abs/1806.01822", status: read, label: "Relational RNNs", title: "Relational recurrent neural networks" }
+- { id: abstract-reasoning-pgm, url: "https://arxiv.org/abs/1807.04225", status: read, label: "Abstract reasoning (PGM)", title: "Measuring abstract reasoning in neural networks" }
+- { id: self-other-modeling, url: "https://arxiv.org/abs/1802.09640", status: read, label: "Self Other-Modeling", title: "Modeling Others using Oneself in Multi-Agent Reinforcement Learning" }
+- { id: social-influence, url: "https://arxiv.org/abs/1810.08647", status: read, label: "Social influence", title: "Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning" }
+- { id: graph-networks, url: "https://arxiv.org/abs/1806.01261", status: read, label: "Graph networks", title: "Relational inductive biases, deep learning, and graph networks" }
+- { id: learning-to-rl, url: "https://arxiv.org/abs/1611.05763", status: read, label: "Learning to RL", title: "Learning to reinforcement learn" }
+- { id: unreal, url: "https://arxiv.org/abs/1611.05397", status: read, label: "UNREAL", title: "Reinforcement Learning with Unsupervised Auxiliary Tasks" }
+- { id: episodic-control, url: "https://arxiv.org/abs/1606.04460", status: read, label: "Episodic control", title: "Model-Free Episodic Control" }
+- { id: grid-cells, url: "https://doi.org/10.1038/s41586-018-0102-6", status: read, label: "Grid cells", title: "Vector-based navigation using grid-like representations in artificial agents" }
+- { id: prefrontal-meta-rl, url: "https://doi.org/10.1038/s41593-018-0147-8", status: read, label: "Prefrontal meta-RL", title: "Prefrontal cortex as a meta-reinforcement learning system" }
+- { id: gqn, url: "https://doi.org/10.1126/science.aar6170", status: read, label: "GQN", title: "Neural scene representation and rendering" }
+# Multi-agent (2014-2019)
+- { id: lola, url: "https://arxiv.org/abs/1709.04326", status: read, label: "LOLA", title: "Learning with Opponent-Learning Awareness" }
+- { id: maddpg, url: "https://arxiv.org/abs/1706.02275", status: read, label: "MADDPG", title: "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments" }
+- { id: grounded-compositional-language, url: "https://arxiv.org/abs/1703.04908", status: read, label: "Grounded compositional language", title: "Emergence of Grounded Compositional Language in Multi-Agent Populations" }
+- { id: coma, url: "https://arxiv.org/abs/1705.08926", status: read, label: "COMA", title: "Counterfactual Multi-Agent Policy Gradients" }
+- { id: multi-agent-competition, url: "https://arxiv.org/abs/1710.03748", status: read, label: "Multi-agent competition", title: "Emergent Complexity via Multi-Agent Competition" }
+- { id: rial-dial, url: "https://arxiv.org/abs/1605.06676", status: read, label: "RIAL/DIAL", title: "Learning to Communicate with Deep Multi-Agent Reinforcement Learning" }
+- { id: commnet, url: "https://arxiv.org/abs/1605.07736", status: read, label: "CommNet", title: "Learning Multiagent Communication with Backpropagation" }
+- { id: sequential-social-dilemmas, url: "https://arxiv.org/abs/1702.03037", status: read, label: "Sequential social dilemmas", title: "Multi-agent Reinforcement Learning in Sequential Social Dilemmas" }
+- { id: psro, url: "https://arxiv.org/abs/1711.00832", status: read, label: "PSRO", title: "A Unified Game-Theoretic Approach to Multiagent Reinforcement Learning" }
+- { id: qmix, url: "https://arxiv.org/abs/1803.11485", status: read, label: "QMIX", title: "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning" }
+- { id: capture-the-flag, url: "https://arxiv.org/abs/1807.01281", status: read, label: "Capture the Flag", title: "Human-level performance in first-person multiplayer games with population-based deep reinforcement learning" }
+- { id: hide-and-seek, url: "https://arxiv.org/abs/1909.07528", status: read, label: "Hide and seek", title: "Emergent Tool Use From Multi-Agent Autocurricula" }
+# Reinforcement learning (2014-2019)
+- { id: ape-x, url: "https://arxiv.org/abs/1803.00933", status: read, label: "Ape-X", title: "Distributed Prioritized Experience Replay" }
+- { id: noisynet, url: "https://arxiv.org/abs/1706.10295", status: read, label: "NoisyNet", title: "Noisy Networks for Exploration" }
+- { id: option-critic, url: "https://arxiv.org/abs/1609.05140", status: read, label: "Option-critic", title: "The Option-Critic Architecture" }
+- { id: rnd, url: "https://arxiv.org/abs/1810.12894", status: read, label: "RND", title: "Exploration by Random Network Distillation" }
+- { id: curiosity-at-scale, url: "https://arxiv.org/abs/1808.04355", status: read, label: "Curiosity at scale", title: "Large-Scale Study of Curiosity-Driven Learning" }
+- { id: planet, url: "https://arxiv.org/abs/1811.04551", status: read, label: "PlaNet", title: "Learning Latent Dynamics for Planning from Pixels" }
+- { id: dreamer, url: "https://arxiv.org/abs/1912.01603", status: read, label: "Dreamer", title: "Dream to Control: Learning Behaviors by Latent Imagination" }
+- { id: muzero, url: "https://arxiv.org/abs/1911.08265", status: read, label: "MuZero", title: "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model" }
+- { id: soft-q-learning, url: "https://arxiv.org/abs/1702.08165", status: read, label: "Soft Q-learning", title: "Reinforcement Learning with Deep Energy-Based Policies" }
+- { id: acer, url: "https://arxiv.org/abs/1611.01224", status: read, label: "ACER", title: "Sample Efficient Actor-Critic with Experience Replay" }
+- { id: acktr, url: "https://arxiv.org/abs/1708.05144", status: read, label: "ACKTR", title: "Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation" }
+- { id: rllab-benchmark, url: "https://arxiv.org/abs/1604.06778", status: read, label: "rllab benchmark", title: "Benchmarking Deep Reinforcement Learning for Continuous Control" }
+- { id: deep-rl-that-matters, url: "https://arxiv.org/abs/1709.06560", status: read, label: "Deep RL that matters", title: "Deep Reinforcement Learning that Matters" }
+- { id: deepmind-lab, url: "https://arxiv.org/abs/1612.03801", status: read, label: "DeepMind Lab", title: "DeepMind Lab" }
+- { id: sc2le, url: "https://arxiv.org/abs/1708.04782", status: read, label: "SC2LE", title: "StarCraft II: A New Challenge for Reinforcement Learning" }
+- { id: alphastar, url: "https://doi.org/10.1038/s41586-019-1724-z", status: read, label: "AlphaStar", title: "Grandmaster level in StarCraft II using multi-agent reinforcement learning" }
+- { id: domain-randomization, url: "https://arxiv.org/abs/1703.06907", status: read, label: "Domain randomization", title: "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World" }
+- { id: dexterous-manipulation, url: "https://arxiv.org/abs/1808.00177", status: read, label: "Dexterous manipulation", title: "Learning Dexterous In-Hand Manipulation" }
+- { id: sac, url: "https://arxiv.org/abs/1801.01290", status: read, label: "SAC", title: "Soft Actor-Critic" }
+- { id: impala, url: "https://arxiv.org/abs/1802.01561", status: read, label: "IMPALA", title: "IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures" }
+- { id: alphazero, url: "https://arxiv.org/abs/1712.01815", status: read, label: "AlphaZero", title: "Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm" }
+# Memory and meta-learning (2014-2019)
+- { id: reptile, url: "https://arxiv.org/abs/1803.02999", status: read, label: "Reptile", title: "On First-Order Meta-Learning Algorithms" }
+# Generative models (2014-2019)
+- { id: stochastic-backprop, url: "https://arxiv.org/abs/1401.4082", status: read, label: "Stochastic backprop", title: "Stochastic Backpropagation and Approximate Inference in Deep Generative Models" }
+- { id: normalizing-flows, url: "https://arxiv.org/abs/1505.05770", status: read, label: "Normalizing flows", title: "Variational Inference with Normalizing Flows" }
+- { id: vae-tutorial, url: "https://arxiv.org/abs/1606.05908", status: read, label: "VAE tutorial", title: "Tutorial on Variational Autoencoders" }
+- { id: understanding-vae, url: "https://arxiv.org/abs/1804.03599", status: read, label: "Understanding β-VAE", title: "Understanding disentangling in beta-VAE" }
+- { id: stylegan, url: "https://arxiv.org/abs/1812.04948", status: read, label: "StyleGAN", title: "A Style-Based Generator Architecture for Generative Adversarial Networks" }
+- { id: biggan, url: "https://arxiv.org/abs/1809.11096", status: read, label: "BigGAN", title: "Large Scale GAN Training for High Fidelity Natural Image Synthesis" }
+- { id: spectral-norm, url: "https://arxiv.org/abs/1802.05957", status: read, label: "Spectral norm", title: "Spectral Normalization for Generative Adversarial Networks" }
+- { id: gan-tutorial, url: "https://arxiv.org/abs/1701.00160", status: read, label: "GAN tutorial", title: "NIPS 2016 Tutorial: Generative Adversarial Networks" }
+# Sequences and language (2014-2019)
+- { id: word2vec, url: "https://arxiv.org/abs/1301.3781", status: read, label: "word2vec", title: "Efficient Estimation of Word Representations in Vector Space" }
+- { id: bpe, url: "https://arxiv.org/abs/1508.07909", status: read, label: "BPE", title: "Neural Machine Translation of Rare Words with Subword Units" }
+- { id: luong-attention, url: "https://arxiv.org/abs/1508.04025", status: read, label: "Luong attention", title: "Effective Approaches to Attention-based Neural Machine Translation" }
+- { id: rnn-encoder-decoder, url: "https://arxiv.org/abs/1406.1078", status: read, label: "RNN encoder-decoder", title: "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation" }
+- { id: elmo, url: "https://arxiv.org/abs/1802.05365", status: read, label: "ELMo", title: "Deep contextualized word representations" }
+# Vision and training (2014-2019)
+- { id: prelu-he-init, url: "https://arxiv.org/abs/1502.01852", status: read, label: "PReLU / He init", title: "Delving Deep into Rectifiers" }
+- { id: elu, url: "https://arxiv.org/abs/1511.07289", status: read, label: "ELU", title: "Fast and Accurate Deep Network Learning by Exponential Linear Units (ELUs)" }
+- { id: large-batch-sharp-minima, url: "https://arxiv.org/abs/1609.04836", status: read, label: "Large-batch sharp minima", title: "On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima" }
+- { id: loss-landscapes, url: "https://arxiv.org/abs/1712.09913", status: read, label: "Loss landscapes", title: "Visualizing the Loss Landscape of Neural Nets" }
+- { id: cyclical-lrs, url: "https://arxiv.org/abs/1506.01186", status: read, label: "Cyclical LRs", title: "Cyclical Learning Rates for Training Neural Networks" }
+- { id: rethinking-generalization, url: "https://arxiv.org/abs/1611.03530", status: read, label: "Rethinking generalization", title: "Understanding deep learning requires rethinking generalization" }
+- { id: sgdr, url: "https://arxiv.org/abs/1608.03983", status: read, label: "SGDR", title: "SGDR: Stochastic Gradient Descent with Warm Restarts" }

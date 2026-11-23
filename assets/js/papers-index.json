@@ -1,0 +1,6 @@
+---
+layout: null
+---
+{% assign meta = site.data.papers_meta %}{"papers": [{% for paper in site.data.papers %}{% assign m = meta.papers[paper.id] %}{"id": {{ paper.id | jsonify }}, "title": {{ paper.title | default: m.title | default: paper.url | jsonify }}, "label": {{ paper.label | jsonify }}, "authors": {{ paper.authors | default: m.authors | jsonify }}, "year": {{ paper.year | default: m.year | jsonify }}, "status": {{ paper.status | jsonify }}, "area": {{ paper.area | jsonify }}, "note": {{ paper.note | jsonify }}, "abstract": {{ m.abstract | jsonify }}, "openalex": {{ m.openalex | jsonify }}, "refs": {{ m.refs | jsonify }}},
+{% endfor %}null],
+"works": {{ meta.works | jsonify }}}

@@ -7,6 +7,8 @@ main:
     url: /games/
   - title: "Library"
     url: /library/
+  - title: "Papers"
+    url: /papers/
   - title: "Links"
     url: /links/
   - title: "Resume"

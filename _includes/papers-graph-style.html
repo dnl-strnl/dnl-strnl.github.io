@@ -1,0 +1,20 @@
+{% comment %}
+  How the paper map (assets/js/papers-graph.js) is drawn; shared by /papers/ and /papers/map/.
+{% endcomment %}
+<style>
+#papers-graph svg { display: block; width: 100%; height: 100%; cursor: grab; }
+#papers-graph .edge { stroke: currentColor; stroke-opacity: 0.22; }
+#papers-graph .edge.near { stroke-opacity: 0.1; stroke-dasharray: 2 3; }
+#papers-graph .edge.cross { stroke-opacity: 0.07; }
+#papers-graph .edge.lit { stroke-opacity: 0.7; }
+#papers-graph .node { cursor: pointer; }
+#papers-graph .node circle { stroke: transparent; stroke-width: 6px; }
+#papers-graph .node.queue circle { fill-opacity: 0.25; stroke: none; }
+#papers-graph .node .ring { fill: none; stroke: currentColor; stroke-width: 1.5px; }
+#papers-graph .node.picked .ring { stroke-width: 2.5px; }
+#papers-graph .node text { fill: currentColor; font-size: 10px; pointer-events: none; opacity: 0; }
+#papers-graph .node text.show { opacity: 0.9; }
+#papers-graph .area { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; paint-order: stroke; stroke-width: 4px; stroke-linejoin: round; cursor: pointer; opacity: 0; pointer-events: none; }
+#papers-graph .area.show { opacity: 1; pointer-events: auto; }
+#papers-graph .dim { opacity: 0.08; }
+</style>
