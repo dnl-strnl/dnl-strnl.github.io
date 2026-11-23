@@ -1,7 +1,7 @@
 ---
 title: "Library"
 permalink: /library/
-author_profile: false
+author_profile: true
 classes: wide
 layout: single
 ---
