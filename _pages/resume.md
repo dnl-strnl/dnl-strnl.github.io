@@ -46,7 +46,7 @@ layout: single
 
 .timeline-date {
   font-size: 0.85em;
-  color: #3498db;
+  color: #8d8085;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -71,8 +71,8 @@ layout: single
 }
 
 .timeline-org a:hover {
-  color: #3498db;
-  border-bottom-color: #3498db;
+  color: #8f80dc;
+  border-bottom-color: #8f80dc;
 }
 
 .timeline-desc {
@@ -92,7 +92,7 @@ layout: single
 
 .timeline-section {
   font-size: 1.4em;
-  color: #3498db;
+  color: #8f80dc;
   font-weight: 700;
   margin: 2em 0 1em;
   padding-left: 90px;
