@@ -555,3 +555,25 @@
 - { id: cyclical-lrs, url: "https://arxiv.org/abs/1506.01186", status: read, label: "Cyclical LRs", title: "Cyclical Learning Rates for Training Neural Networks" }
 - { id: rethinking-generalization, url: "https://arxiv.org/abs/1611.03530", status: read, label: "Rethinking generalization", title: "Understanding deep learning requires rethinking generalization" }
 - { id: sgdr, url: "https://arxiv.org/abs/1608.03983", status: read, label: "SGDR", title: "SGDR: Stochastic Gradient Descent with Warm Restarts" }
+- { id: reinforce, url: "https://doi.org/10.1007/BF00992696", status: read, label: "REINFORCE", area: "Reinforcement learning" }
+- { id: residual-algorithms, url: "https://doi.org/10.1016/B978-1-55860-377-6.50013-X", status: read, label: "Residual algorithms", area: "Reinforcement learning" }
+- { id: param-noise, url: "https://arxiv.org/abs/1706.01905", status: read, label: "Parameter space noise", area: "Reinforcement learning" }
+- { id: hillis-parasites, url: "https://doi.org/10.1016/0167-2789(90)90076-2", status: read, label: "Coevolving parasites", area: "Evolution" }
+- { id: competitive-coevolution, url: "https://doi.org/10.1162/evco.1997.5.1.1", status: read, label: "Competitive coevolution", area: "Evolution" }
+- { id: map-elites, url: "https://arxiv.org/abs/1504.04909", status: read, label: "MAP-Elites", area: "Evolution" }
+- { id: amoebanet, url: "https://arxiv.org/abs/1802.01548", status: read, label: "AmoebaNet", area: "Evolution" }
+- { id: surprising-creativity, url: "https://arxiv.org/abs/1803.03453", status: read, label: "Surprising creativity of digital evolution", area: "Evolution" }
+- { id: automl-zero, url: "https://arxiv.org/abs/2003.03384", status: read, label: "AutoML-Zero", area: "Evolution" }
+- { id: es-llm-finetuning, url: "https://arxiv.org/abs/2509.24372", status: read, label: "ES for LLM fine-tuning", area: "Evolution" }
+- { id: novelty-search, url: "https://doi.org/10.1162/EVCO_a_00025", status: read, label: "Novelty search", area: "Curiosity & exploration" }
+- { id: go-explore, url: "https://arxiv.org/abs/1901.10995", status: read, label: "Go-Explore", area: "Curiosity & exploration" }
+- { id: ttur, url: "https://arxiv.org/abs/1706.08500", status: read, label: "TTUR", area: "GANs" }
+- { id: pacgan, url: "https://arxiv.org/abs/1712.04086", status: read, label: "PacGAN", area: "GANs" }
+- { id: gan-convergence, url: "https://arxiv.org/abs/1801.04406", status: read, label: "GAN convergence", area: "GANs" }
+- { id: gan-forgetting, url: "https://arxiv.org/abs/1807.04015", status: read, label: "GAN catastrophic forgetting", area: "GANs" }
+- { id: lipizzaner, url: "https://arxiv.org/abs/1811.12843", status: read, label: "Lipizzaner", area: "GANs" }
+- { id: reward-overoptimization, url: "https://arxiv.org/abs/2210.10760", status: read, label: "Reward model overoptimization", area: "Large language models" }
+- { id: deepseekmath, url: "https://arxiv.org/abs/2402.03300", status: read, label: "DeepSeekMath (GRPO)", area: "Large language models" }
+- { id: deepseek-r1, url: "https://arxiv.org/abs/2501.12948", status: read, label: "DeepSeek-R1", area: "Large language models" }
+- { id: alphago, url: "https://doi.org/10.1038/nature16961", status: read, label: "AlphaGo", area: "Reinforcement learning" }
+- { id: deadly-triad, url: "https://arxiv.org/abs/1812.02648", status: read, label: "Deadly triad", area: "Reinforcement learning" }
