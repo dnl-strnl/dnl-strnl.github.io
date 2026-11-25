@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -16 960 916" width="960" height="916" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Evolutionary algorithms, GANs, and reinforcement learning: what each pair shares and what sits at the center</title>
+  <rect y="-16" width="960" height="916" rx="14" fill="#161616"/>
+
+  <defs>
+    <path id="arc-ea" d="M57.3 251.6 A303 303 0 0 1 428.4 37.3"/>
+    <path id="arc-gan" d="M531.6 37.3 A303 303 0 0 1 902.7 251.6"/>
+    <path id="arc-rl" d="M253.7 781.5 A320 320 0 0 0 706.3 781.5"/>
+  </defs>
+
+  <!-- circles -->
+  <circle cx="350" cy="330" r="290" fill="#4ade80" fill-opacity="0.14" stroke="#4ade80" stroke-opacity="0.85" stroke-width="2"/>
+  <circle cx="610" cy="330" r="290" fill="#f472b6" fill-opacity="0.14" stroke="#f472b6" stroke-opacity="0.85" stroke-width="2"/>
+  <circle cx="480" cy="555.2" r="290" fill="#38bdf8" fill-opacity="0.14" stroke="#38bdf8" stroke-opacity="0.85" stroke-width="2"/>
+
+  <!-- field titles, set along the outside of each circle -->
+  <g text-anchor="middle" font-size="22" font-weight="700" letter-spacing="0.5">
+    <text fill="#4ade80"><textPath xlink:href="#arc-ea" startOffset="50%">Evolutionary algorithms</textPath></text>
+    <text fill="#f472b6"><textPath xlink:href="#arc-gan" startOffset="50%">GANs</textPath></text>
+    <text fill="#38bdf8"><textPath xlink:href="#arc-rl" startOffset="50%">Reinforcement learning</textPath></text>
+  </g>
+
+  <!-- EA only -->
+  <g text-anchor="middle" font-size="16" fill="#d8d8d8">
+    <text x="193" y="256">no gradients, anywhere</text>
+    <text x="193" y="290">the genome can be weights,</text>
+    <text x="193" y="312">a program, an architecture</text>
+    <text x="193" y="346">crossover</text>
+  </g>
+
+  <!-- GAN only -->
+  <g text-anchor="middle" font-size="16" fill="#d8d8d8">
+    <text x="767" y="256">the evaluator is learned</text>
+    <text x="767" y="278">from data, and differentiable</text>
+    <text x="767" y="312">density matching:</text>
+    <text x="767" y="334">JS, Wasserstein</text>
+  </g>
+
+  <!-- RL only -->
+  <g text-anchor="middle" font-size="16" fill="#d8d8d8">
+    <text x="480" y="680">sequential decisions</text>
+    <text x="480" y="714">temporal credit assignment</text>
+    <text x="480" y="736">(Bellman bootstrapping)</text>
+    <text x="480" y="770">the environment is the evaluator</text>
+  </g>
+
+  <!-- EA ∩ GAN (top lens) -->
+  <g text-anchor="middle" font-size="14" fill="#f0f0f0">
+    <text x="480" y="146" font-weight="700">population + fitness</text>
+    <text x="480" y="174">coevolution:</text>
+    <text x="480" y="193">fitness that fights back</text>
+    <text x="480" y="221">premature convergence</text>
+    <text x="480" y="240">= mode collapse</text>
+  </g>
+
+  <!-- EA ∩ RL (lower-left lens) -->
+  <g text-anchor="start" font-size="14" fill="#f0f0f0">
+    <text x="216" y="470" font-weight="700">explore vs exploit</text>
+    <text x="216" y="489">mutation vs selection</text>
+    <text x="216" y="513">scalar outcomes only:</text>
+    <text x="216" y="532">trial-hungry</text>
+    <text x="216" y="556">ES = REINFORCE in θ-space</text>
+    <text x="216" y="575">CMA-ES = TRPO (natural grad)</text>
+  </g>
+
+  <!-- GAN ∩ RL (lower-right lens) -->
+  <g text-anchor="end" font-size="14" fill="#f0f0f0">
+    <text x="746" y="470" font-weight="700">actor–critic</text>
+    <text x="746" y="491">pathwise gradients</text>
+    <text x="746" y="512">GAIL, SeqGAN, RLHF</text>
+    <text x="746" y="536">a learned, differentiable</text>
+    <text x="746" y="555">stand-in for the evaluator</text>
+    <text x="746" y="578">moving target: 2 timescales</text>
+  </g>
+
+  <!-- center -->
+  <g text-anchor="middle" fill="#ffffff" font-size="15">
+    <text x="480" y="326" font-size="20" font-weight="700" font-style="italic">J(θ) = E<tspan font-size="12" dy="5">x ~ p(θ)</tspan><tspan dy="-5" dx="3">[ f(x) ]</tspan></text>
+    <text x="480" y="366">sample → score →</text>
+    <text x="480" y="387">move mass to the winners</text>
+    <text x="480" y="421" font-weight="700">diversity collapse:</text>
+    <text x="480" y="442">the universal failure</text>
+    <text x="480" y="476" font-weight="700">Goodhart's law:</text>
+    <text x="480" y="497">proxies get gamed</text>
+  </g>
+</svg>
