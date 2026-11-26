@@ -17,4 +17,8 @@
 #papers-graph .area { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; paint-order: stroke; stroke-width: 4px; stroke-linejoin: round; cursor: pointer; opacity: 0; pointer-events: none; }
 #papers-graph .area.show { opacity: 1; pointer-events: auto; }
 #papers-graph .dim { opacity: 0.08; }
+/* The rainbow dot (papers-mesh.html) hides the vertices, leaving the mesh of lines. */
+.papers__mesh { width: 0.75em; height: 0.75em; padding: 0; border: 0; border-radius: 50%; background: conic-gradient(#e0605e, #e8b04a, #8fcf6a, #5ec4bd, #6d8fe0, #a67fe0, #e0605e); opacity: 0.5; cursor: pointer; }
+.papers__mesh:hover, .papers__mesh[aria-pressed="true"] { opacity: 1; }
+#papers-graph.mesh .node { display: none; }
 </style>

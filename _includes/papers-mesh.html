@@ -1,0 +1,24 @@
+{% comment %}
+  The rainbow dot that hides the paper map's vertices, leaving the mesh of lines; shared by /papers/ and /papers/map/.
+  The choice rides along in ?mesh, on this page's URL and on the links between the two pages.
+{% endcomment %}
+<button class="papers__mesh" type="button" aria-pressed="false" aria-label="Show only the lines" title="Show only the lines"></button>
+<script>
+(function () {
+  const button = document.currentScript.previousElementSibling;
+  function set(on) {
+    document.getElementById('papers-graph').classList.toggle('mesh', on);
+    button.setAttribute('aria-pressed', on);
+    [location, ...document.querySelectorAll('.papers__carry')].forEach(function (link) {
+      const url = new URL(link.href);
+      if (on) url.searchParams.set('mesh', ''); else url.searchParams.delete('mesh');
+      const href = url.href.replace('mesh=', 'mesh');
+      if (link === location) history.replaceState(null, '', href); else link.href = href;
+    });
+  }
+  button.addEventListener('click', function () { set(button.getAttribute('aria-pressed') !== 'true'); });
+  const start = function () { set(new URLSearchParams(location.search).has('mesh')); };
+  start();
+  document.addEventListener('DOMContentLoaded', start); // again for the links further down the page
+})();
+</script>

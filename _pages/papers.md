@@ -22,7 +22,8 @@ header:
 #papers-areas small { opacity: 0.5; }
 #papers-graph { position: relative; height: 640px; margin: 0.8em 0 0; border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 8px; overflow: hidden; }
 @media (max-width: 600px) { #papers-graph { height: 420px; } }
-.papers__full, .papers__full:visited { position: absolute; top: 0.6em; right: 0.9em; font-size: 0.65em; letter-spacing: 0.08em; text-transform: uppercase; color: inherit; opacity: 0.5; }
+.papers__tools { position: absolute; top: 0.6em; right: 0.9em; line-height: 0; }
+.papers__full, .papers__full:visited { position: absolute; bottom: 0.6em; right: 0.9em; font-size: 0.65em; letter-spacing: 0.08em; text-transform: uppercase; color: inherit; opacity: 0.5; }
 .papers__full:hover { color: inherit; opacity: 1; }
 #papers-info { min-height: 4.2em; margin: 0.7em 0 0; font-size: 0.7em; line-height: 1.5; opacity: 0.8; }
 
@@ -51,7 +52,7 @@ Papers I've read or am working through, as a map rather than a list. Lines join 
 
 <div class="papers">
 <input id="papers-search" type="search" placeholder="Search titles, abstracts, notes and references" aria-label="Search papers">
-<div id="papers-graph" data-index="{{ '/assets/js/papers-index.json' | relative_url }}"><a class="papers__full" href="{{ '/papers/map/' | relative_url }}">Full screen</a></div>
+<div id="papers-graph" data-index="{{ '/assets/js/papers-index.json' | relative_url }}"><div class="papers__tools">{% include papers-mesh.html %}</div><a class="papers__full papers__carry" href="{{ '/papers/map/' | relative_url }}">Full screen</a></div>
 <p id="papers-info"></p>
 <div id="papers-areas"></div>
 
