@@ -18,10 +18,7 @@ layout: single
 
 {% assign posts = site.categories.blog %}
 {% for post in posts %}
-<div class="blog-post" data-tags="{{ post.tags | join: ' ' }}">
-  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>{{ post.excerpt }}</p>
-</div>
+{% include post-preview.html %}
 {% endfor %}
 
 <script src="{{ '/assets/js/blog-tags.js' | relative_url }}"></script>

@@ -1,4 +1,10 @@
 ---
-layout: home
+layout: single
 author_profile: true
 ---
+
+<h3 class="archive__subtitle">Recent Posts</h3>
+
+{% for post in site.posts %}
+{% include post-preview.html %}
+{% endfor %}
