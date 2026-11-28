@@ -8,7 +8,7 @@ tags: [computer-vision, projects]
 Every version of [SAM](https://github.com/facebookresearch/segment-anything) so far has required you to click. Click a point, drag a box around the thing, click again because the first click grabbed the shadow. It works, but your hands are doing all the prompting, and a lot of the time they’re full.
 
 <figure>
-  <img src="/assets/images/segment-anything-task.png" alt="The promptable segmentation task from the Segment Anything paper: points, a box, a rough mask, or free text go into the model alongside an image, and a valid mask comes out" style="width: 100%; margin-bottom: 0;">
+  <img src="/assets/images/segment-anything-task.png" alt="The promptable segmentation task from the Segment Anything paper: points, a box, a rough mask, or free text go into the model alongside an image, and a valid mask comes out" style="width: 100%; margin-bottom: 0; border-radius: 0; box-shadow: none;">
   <figcaption style="margin-top: 0.5em;">The promptable segmentation task (<a href="https://arxiv.org/abs/2304.02643">Kirillov et al., 2023</a>).</figcaption>
 </figure>
 

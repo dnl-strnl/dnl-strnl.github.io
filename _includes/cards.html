@@ -1,5 +1,6 @@
 <style>
-/* A live card previews the running app itself: an inert iframe rendered at 3x the card's size and scaled back down. */
+/* A live card previews the running app itself: an inert iframe rendered at 3x the card's size and scaled back down.
+   A card with no image (or whose image fails to load) shows the emoji wallpaper instead. */
 .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; }
 @media (max-width: 600px) { .projects { grid-template-columns: 1fr; } }
 .project { display: block; color: inherit; text-decoration: none; border: 1px solid rgba(128, 128, 128, 0.3); border-radius: 8px; overflow: hidden; transition: border-color 0.15s, transform 0.15s; }
@@ -9,7 +10,7 @@ a.project:hover, a.project:focus-visible { border-color: currentColor; transform
 .project__shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: rgba(128, 128, 128, 0.12); }
 .project__shot iframe { position: absolute; top: 0; left: 0; width: 300%; height: 300%; border: 0; transform: scale(calc(1 / 3)); transform-origin: 0 0; pointer-events: none; opacity: 0; transition: opacity 0.3s; }
 .project.live .project__shot iframe { opacity: 1; }
-.project__shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.project__shot img, .project__shot .emoji-wallpaper-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .project__status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 1em; text-align: center; font-size: 0.7em; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; }
 .project.live .project__status { display: none; }
 .project__meta { padding: 0.8em 1em; border-top: 1px solid rgba(128, 128, 128, 0.3); }
@@ -45,7 +46,7 @@ a.project:hover, a.project:focus-visible { border-color: currentColor; transform
       {% elsif card.image %}
       <img src="{{ card.image | relative_url }}" alt="{{ card.title }}" loading="lazy">
       {% else %}
-      <span class="project__status">{% if href %}{{ card.title }}{% else %}Coming soon{% endif %}</span>
+      {% include emoji-wallpaper.html %}
       {% endif %}
     </div>
     <div class="project__meta">

@@ -66,6 +66,29 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- Missing media: an image or video that fails to load is replaced by the emoji wallpaper, framed at the
+     element's own size (its width/height attributes, else 16:10). Error events don't bubble, so this
+     listens in the capture phase; a <video> with <source> children fails on its last source. -->
+<template id="emoji-wallpaper">{% include emoji-wallpaper.html %}</template>
+<script>
+document.addEventListener("error", function(e) {
+  var el = e.target;
+  if (el.tagName === "SOURCE") {
+    if (el.nextElementSibling && el.nextElementSibling.tagName === "SOURCE") return;
+    el = el.parentElement;
+  }
+  if (!el || !/^(IMG|VIDEO)$/.test(el.tagName) || !el.parentNode) return;
+  var frame = document.createElement("div");
+  frame.className = "emoji-wallpaper-frame";
+  frame.setAttribute("style", el.getAttribute("style") || "");
+  var w = el.getAttribute("width"), h = el.getAttribute("height");
+  if (w && h) frame.style.aspectRatio = w + " / " + h;
+  if (el.alt) { frame.setAttribute("role", "img"); frame.setAttribute("aria-label", el.alt); }
+  frame.appendChild(document.getElementById("emoji-wallpaper").content.cloneNode(true));
+  el.replaceWith(frame);
+}, true);
+</script>
+
 <!-- MathJax for LaTeX rendering -->
 {% if page.math %}
 <script>

@@ -1,0 +1,13 @@
+{% comment %}
+  Emoji wallpaper, after the iOS emoji wallpaper: a lavender backdrop tiled with staggered rows of
+  emojis. Fills its (positioned) container; the cards use it in place of a missing or loading
+  preview. Each row is the emoji sequence rotated two places from the row above (so the diagonals
+  vary) and offset half a cell on odd rows. Styles are in assets/css/main.scss.
+{% endcomment %}
+{% assign emojis = "🧠,👾,🎱,🥞,🍌" | split: "," %}
+{% assign n = emojis | size %}
+<div class="emoji-wallpaper" style="--n: {{ n }}" aria-hidden="true">
+  {% for row in (0..4) %}
+  <div class="emoji-wallpaper__row">{% for col in (0..19) %}{% assign i = row | times: 2 | plus: col | modulo: n %}<span>{{ emojis[i] }}</span>{% endfor %}</div>
+  {% endfor %}
+</div>

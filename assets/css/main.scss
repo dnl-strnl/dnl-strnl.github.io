@@ -94,3 +94,51 @@ div.highlighter-rouge, figure.highlight {
   .sidebar .author__urls { width: fit-content; margin: 0 auto; text-align: left; }
   .sidebar .author__urls a { padding-right: 0; }
 }
+
+/* Emoji wallpaper (_includes/emoji-wallpaper.html): the placeholder for missing images and videos.
+   It fills its positioned container: a card's preview, or the frame that stands in for a broken
+   image or video (see _includes/head/custom.html). Rows drift left by one sequence length
+   (--n cells) per loop, which lands on an identical frame. */
+.emoji-wallpaper-frame {
+  position: relative; display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 10; margin: 0 auto;
+  overflow: hidden; border-radius: 8px;
+}
+.emoji-wallpaper {
+  --cell: 3.4rem;
+  position: absolute; inset: 0; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: space-evenly;
+  background: radial-gradient(120% 140% at 30% 20%, #d6caf8 0%, #bfaef2 55%, #a996e8 100%);
+}
+.emoji-wallpaper__row {
+  display: flex; flex-shrink: 0; width: max-content; height: calc(var(--cell) * 0.62);
+  animation: emoji-wallpaper-drift 40s linear infinite;
+  &:nth-child(even) { margin-left: calc(var(--cell) * -0.5); }
+  span {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: var(--cell); font-size: 1.7rem; line-height: 1;
+    filter: drop-shadow(0 3px 4px rgba(60, 30, 120, 0.25));
+  }
+}
+@keyframes emoji-wallpaper-drift {
+  to { transform: translateX(calc(var(--cell) * var(--n) * -1)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .emoji-wallpaper__row { animation: none; }
+}
+
+/* Hugging Face has no Font Awesome icon, so the sidebar link uses the official logo. */
+.hf-icon {
+  display: inline-block; height: 1em; vertical-align: -0.125em;
+  background: url("../images/huggingface.svg") no-repeat center / contain;
+}
+
+/* LinkedIn's "in" is a cutout in the glyph; fill it white behind a brand-blue square. */
+.author__urls.social-icons i.fa-linkedin { // outranks the theme's `.author__urls.social-icons i { color: inherit }`
+  color: #0a66c2;
+  background: linear-gradient(#fff, #fff) no-repeat center / 0.7em 0.7em;
+}
+/* Show a solid white envelope instead of the square with an envelope cutout. */
+.author__urls .fa-envelope-square::before { content: "\f0e0"; }
+
+/* Mute the LinkedIn and Hugging Face brand colors to grays. */
+.author__urls.social-icons i.fa-linkedin, .author__urls .hf-icon { filter: grayscale(1); }
